@@ -1,5 +1,5 @@
 # Angular 4 project
-##Main Source
+## Main Source
 
 This repository holds the TypeScript source code of steps in the angular's tutorial [angular.io](https://angular.io/tutorial).
 
