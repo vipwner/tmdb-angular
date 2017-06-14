@@ -1,0 +1,74 @@
+.background-images{
+    background: url(imgs/background1.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+.wrapper{
+    background-color: #15191F;
+}
+.logo-tmdb{
+    margin:28px 3% 0;
+    
+}
+.buttons{
+    margin:18px 3% 0;
+    padding: 7px 17px;
+    float: right;
+}
+
+header{
+    height: 90px;
+    line-height: 38px;
+    background-color: #15191F;
+    /*Opacity start*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.80;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+    /*Opacity end*/
+    position: fixed;
+     z-index: 9999;
+    top: 0;
+    transition: top 0.2s ease-in-out;
+    width: 100%;
+}
+.nav-up {
+    top: -90px;
+}
+
+body {
+    background-color: #15191F;
+    padding-top: 40px;
+}
+.contain{
+    margin-top: 70px;
+}
+.backgrounds{
+    background-attachment: fixed;
+    position: relative;
+  min-height: 100%;
+  margin-top:0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+}
+.backgroundF{
+     height: 100%;
+  position: relative;
+  z-index: 1;
+}
+@media only screen and (min-width: 480px) {
+  .backgrounds {
+    background-attachment: fixed;
+  }
+}
+.bg1{
+    background-image: url("/css/imgs/background1.jpg");
+}
+.bg2{
+    background-image: url("/css/imgs/backgroundInterstellar.jpg");
+}
+}
+}

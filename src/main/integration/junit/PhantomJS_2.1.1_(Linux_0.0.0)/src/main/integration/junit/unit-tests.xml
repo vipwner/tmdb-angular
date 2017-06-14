@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<testsuite name="PhantomJS 2.1.1 (Linux 0.0.0)" package="" timestamp="2017-06-09T21:36:04" id="0" hostname="jhon1125572-example-angular2-4903366" tests="2" errors="0" failures="0" time="0.035">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"/>
+  </properties>
+  <testcase name="movieStarsController's test file It should contain an image" time="0.022" classname="PhantomJS_2_1_1_(Linux_0_0_0).movieStarsController's test file"/>
+  <testcase name="the homecontroller should have matching defaults" time="0.013" classname="PhantomJS_2_1_1_(Linux_0_0_0).the homecontroller"/>
+  <system-out>
+    <![CDATA[PhantomJS 2.1.1 (Linux 0.0.0) LOG: 'WARNING: Tried to load angular more than once.'
+,PhantomJS 2.1.1 (Linux 0.0.0) LOG: 'Starting Karma test suite!'
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

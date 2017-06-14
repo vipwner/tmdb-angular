@@ -1,0 +1,10 @@
+
+    <div class="col-md-3" ng-repeat="movie in popMovies.results">
+        <div>
+            <a href="#/movie/{{ movie.id }}" title="{{ movie.title }}" ng-if="movie.poster_path">
+                <img src="{{view.images}}{{ movie.poster_path }}" width="300" height="400" title="{{ movie.title }}" />
+            </a>
+        </div>
+        <score val="movie.vote_average">
+        </score>
+    </div>
