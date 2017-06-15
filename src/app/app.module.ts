@@ -22,7 +22,12 @@ import { HeroService }         from './services/hero.service';
       {
         path: 'dashboard',
         component: DashboardComponent
-      }
+      },
+      // Parameterized -- step
+      {
+        path: 'detail/:id',
+        component: HeroDetailComponent
+      },
     ])
   ],
   declarations: [
