@@ -4,19 +4,21 @@ import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 import { Hero } from './../partials/hero/hero';
-import { HEROES } from './../mocks/mock-heroes';
+//import { HEROES } from './../services/hero.service';
 
 @Injectable()
 export class HeroService {
-  getHeroes(): Promise<Hero[]> {
-    return Promise.resolve(HEROES);
-  }
+  // getHeroes(): Promise<Hero[]> {
+  //   return Promise.resolve(HEROES);
+  // }
   
   // Added getHero method - Parameterized step
   getHero(id: number): Promise<Hero> {
     return this.getHeroes()
               .then(heroes => heroes.find(hero => hero.id === id));
   }
+  
+  // 
   
   private heroesUrl = 'api/heroes';  // URL to web api
 

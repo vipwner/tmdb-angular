@@ -17,7 +17,7 @@ import { Hero } from './hero';
 // Added OnInit implement - Parameterized step
 export class HeroDetailComponent implements OnInit{ 
    
-    
+    hero: Hero;
     // Added constructor method - Parameterized step
     constructor(
       private heroService: HeroService,
