@@ -1,9 +1,13 @@
 import { NgModule }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
+// Added htttp's import.
+import { HttpModule }     from '@angular/http';
 
-// Erase this import - Refactor routes step
-//import { RouterModule }   from '@angular/router';
+// Imports for Simulate the web api step.
+// Imports for loading & configuring the in-memory web api
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './services/in-memory-data.service';
 
 // Components.
 import { AppComponent }        from './app.component';
@@ -11,8 +15,6 @@ import { DashboardComponent } from './partials/dashboard/dashboard.component';
 import { HeroDetailComponent } from './partials/hero/hero-detail.component';
 import { HeroesComponent }     from './partials/hero/heroes.component';
 import { HeroService }         from './services/hero.service';
-
-// Added this import - Refactor routes step
 import { AppRoutingModule }     from './app-routing.module';
 
  
@@ -20,24 +22,9 @@ import { AppRoutingModule }     from './app-routing.module';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
     AppRoutingModule
-    
-    // Erase this routing section - Refactor routes step. It's unneeded.
-    // RouterModule.forRoot([
-    //   {
-    //     path: 'heroes',
-    //     component: HeroesComponent
-    //   },
-    //   {
-    //     path: 'dashboard',
-    //     component: DashboardComponent
-    //   },
-    //   // Parameterized -- step
-    //   {
-    //     path: 'detail/:id',
-    //     component: HeroDetailComponent
-    //   },
-    //])
   ],
   declarations: [
     AppComponent,
