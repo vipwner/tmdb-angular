@@ -1,5 +1,5 @@
 // Added OnInit param - Parameterized step
-import { Component, Input,  OnInit} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 // Added this four imports - Parameterized step
 import { ActivatedRoute, Params }   from '@angular/router';
 import { Location }                 from '@angular/common';
@@ -10,12 +10,13 @@ import { Hero } from './hero';
 
 @Component({
     selector: 'hero-detail',
-    templateUrl: './hero-detail.component.html'
+    templateUrl: './hero-detail.component.html',
+    styleUrls: [ './hero-detail.component.css' ]
 })
 
 // Added OnInit implement - Parameterized step
 export class HeroDetailComponent implements OnInit{ 
-    @Input() hero: Hero;
+   
     
     // Added constructor method - Parameterized step
     constructor(
