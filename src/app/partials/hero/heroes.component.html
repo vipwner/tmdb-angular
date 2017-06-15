@@ -1,4 +1,12 @@
-<hero-detail [hero]="selectedHero"></hero-detail>
+<!-- Erase this hero-detail - Select a hero in the HeroesComponent step -->
+<!--<hero-detail [hero]="selectedHero"></hero-detail>-->
+<div *ngIf="selectedHero">
+    <h2>
+        {{selectedHero.name | uppercase}} is my hero
+    </h2>
+    <button (click)="gotoDetail()">View Details</button>
+</div>
+
 <h2>My Heroes</h2>
 <ul class="heroes">
     <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
