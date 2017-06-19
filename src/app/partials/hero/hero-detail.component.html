@@ -1,0 +1,16 @@
+<div *ngIf="hero">
+    <h2>{{hero.name}} details!</h2>
+    <div>
+        <label>id: </label>{{hero.id}}
+    </div>
+    <div>
+        <label>name: </label>
+        <input [(ngModel)]="hero.name" placeholder="name" />
+    </div>
+    <div> This is a copy of my hero's name
+        <p>{{hero.name}}</p>
+    </div>
+    <!-- Added component to bind a button with goBack method -->
+    <button (click)="goBack()">Back</button>
+    <button (click)="save()">Save</button>
+</div>
