@@ -26,5 +26,5 @@ constructor(private http: Http) { }
 		.map(response => {
 			return response.json(); 
 		})
-}
+	}
 }
