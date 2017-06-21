@@ -1,11 +1,12 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-import { MovieDetailComponent }   from './movie-detail/movie-detail.component';
+import { HomeComponent } from './home/home.component';
+import { MoviesComponent } from './movies/movies.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/movies', pathMatch: 'full' },
-  { path: 'movies',  component: MovieDetailComponent }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home',  component: HomeComponent },
+  { path: 'movies', component: MoviesComponent}
 ];
 
 @NgModule({
