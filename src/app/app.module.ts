@@ -4,17 +4,19 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 // New components.
 import { HeaderComponent } from './header/header.component';
-import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 // Services.
-import { MovieDetailService } from './movie-detail/movie-detail.service';
+import { TmdbService } from './services/tmdb.service';
 // Routing.
 import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
+import { MoviesComponent } from './movies/movies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MovieDetailComponent
+    HomeComponent,
+    MoviesComponent
     
   ],
   imports: [
@@ -22,7 +24,7 @@ import { AppRoutingModule } from './app-routing.module';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [MovieDetailService],
+  providers: [TmdbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
