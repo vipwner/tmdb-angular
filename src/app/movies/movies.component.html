@@ -1,3 +1,6 @@
-<li *ngFor="let movie of movies ">
-    <img id="img-list" src="{{getImgUrl(movie.poster_path)}}" alt="Poster of movie: {{movie.original_title}}" sizes="185px" />
-</li>
+<div class="col-md-12" >
+    <div class="col-md-3" *ngFor="let movie of movies ">
+        <img id="img-list" src="{{getImgUrl(movie.poster_path)}}" alt="Poster of movie: {{movie.original_title}}" width="30%" height="30%" />
+        <p>    
+    </div>
+</div>
