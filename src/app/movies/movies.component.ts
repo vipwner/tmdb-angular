@@ -13,6 +13,7 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 
 import { TmdbService } from './../services/tmdb.service';
+import { TmdbImgService } from './../services/tmdb-img.service';
 
 @Component({
   selector: 'app-movies',
@@ -22,15 +23,25 @@ import { TmdbService } from './../services/tmdb.service';
 export class MoviesComponent implements OnInit {
 
   movies = [];
-  constructor(private tmdbService:TmdbService, private router:Router) { }
+  // Here is the initialization.
+  constructor(private tmdbService:TmdbService, private router:Router,
+  private tmdbImgService:TmdbImgService) { }
 
   ngOnInit() {
-    console.log('netro');
     this.tmdbService.getMovies().subscribe(response => {
 						this.movies = response;
-            console.log("entro",response);
     });
   }
+  
+  /**
+	* This method return image's url of TMDB's API.
+	* @param {src} 
+	* @return String with image's url formatted.
+	**/
+	getImgUrl(src: string): string {
+		return this.tmdbImgService.getImgUrl(src);
+  }
+ 
   
 
 }
