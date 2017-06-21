@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 // Services.
 import { TmdbService } from './services/tmdb.service';
+import { TmdbImgService } from './services/tmdb-img.service';
 // Routing.
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -24,7 +25,8 @@ import { MoviesComponent } from './movies/movies.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [TmdbService],
+  providers: [TmdbService,
+  TmdbImgService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
