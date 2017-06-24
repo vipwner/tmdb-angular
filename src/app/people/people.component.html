@@ -1,0 +1,8 @@
+<div class="col-md-12" >
+    <div *ngIf="show"> 
+        <div class="col-md-3" *ngFor="let person of people " (click)="onSelect(person)">
+            <img src="{{getImgUrl(person.profile_path)}}" alt="Profile image of {{person.name}}" width="30%" height="30%"/>
+            <p>    
+        </div>
+    </div>
+</div>

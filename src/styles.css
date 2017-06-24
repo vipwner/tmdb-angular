@@ -134,7 +134,7 @@ Modules - reusable parts of our design
   color: #a6989a;
 }
 .cd-scrolling-bg.cd-color-3 {
-  background-color: #3d3536;
+  background-color: #000000;
   color: #a6989a;
 }
 @media only screen and (min-width: 480px) {

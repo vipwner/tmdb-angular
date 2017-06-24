@@ -23,7 +23,7 @@ import { TmdbImgService } from './../services/tmdb-img.service';
 export class MoviesComponent implements OnInit {
 
   movies = [];
-  // Here is the initialization.
+  // Initializes
   constructor(private tmdbService:TmdbService, private router:Router,
   private tmdbImgService:TmdbImgService) { }
 
