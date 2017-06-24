@@ -12,6 +12,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { MoviesComponent } from './movies/movies.component';
 import { ContentComponent } from './content/content.component';
+// AnchorScroll import
+import {ScrollToModule} from 'ng2-scroll-to';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +27,8 @@ import { ContentComponent } from './content/content.component';
   imports: [
     BrowserModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ScrollToModule.forRoot()
   ],
   providers: [TmdbService,
   TmdbImgService],
