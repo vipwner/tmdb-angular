@@ -19,7 +19,9 @@ export class PeopleComponent implements OnInit {
 
   people = [];
   person = [];
-  public show = false;
+  personID = "";
+  public showPeople = false;
+  public showPeopleDetail = false;
   title = "Full Cast & Crew";
   // Initializes
   constructor(private peopleService: PeopleService, private router:Router, private tmdbImgService:TmdbImgService ) { }
@@ -28,14 +30,18 @@ export class PeopleComponent implements OnInit {
   ngOnInit() {
     this.peopleService.getPopularPeople().subscribe(response => {
 			this.people = response;
-			this.show = true;
+			this.showPeople = true;
+			console.log(response);
 		});
   }
   
-  onSelect(person: Object[]){
-    this.show = false;
-    console.log(person);
-    this.person = person;
+  onSelect(id:string){
+    this.showPeople = false;
+    this.showPeopleDetail = true;
+    console.log(id);
+    this.personID = id;
+    //console.log(person);
+    //this.person = person;
   }
   /**
 	* This method return the image's url of TMDB's images service

@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { TmdbService } from './services/tmdb.service';
 import { TmdbImgService } from './services/tmdb-img.service';
 import { PeopleService } from './services/people.service';
+import { PeopleDetailService } from './services/people-detail.service';
 // Routing.
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -16,6 +17,7 @@ import { ContentComponent } from './content/content.component';
 // AnchorScroll import
 import {ScrollToModule} from 'ng2-scroll-to';
 import { PeopleComponent } from './people/people.component';
+import { PeopleDetailComponent } from './people-detail/people-detail.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { PeopleComponent } from './people/people.component';
     HomeComponent,
     MoviesComponent,
     ContentComponent,
-    PeopleComponent
+    PeopleComponent,
+    PeopleDetailComponent
     
   ],
   imports: [
@@ -35,7 +38,8 @@ import { PeopleComponent } from './people/people.component';
   ],
   providers: [TmdbService,
   TmdbImgService,
-  PeopleService],
+  PeopleService,
+  PeopleDetailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
