@@ -18,7 +18,6 @@ import { TmdbImgService } from './../services/tmdb-img.service';
 export class PeopleComponent implements OnInit {
 
   people = [];
-  person = [];
   personID = "";
   public showPeople = false;
   public showPeopleDetail = false;
@@ -52,25 +51,5 @@ export class PeopleComponent implements OnInit {
 		return this.tmdbImgService.getImgUrl(src);
 	}
 	
-	
-
-// 	/**
-// 	* Get movies names by movies object list 
-// 	* @param {movies} movies object list
-// 	* @return list of strings with movie names
-// 	**/
-// 	getMoviesNames(movies: Object[]): string{
-// 		let moviesList = this.movieHelper.getMoviesNames(movies).join().slice(0,31);
-// 		return `${moviesList}...`;
-// 	}
-
-// 	/**
-// 	* Using a double number, cast to 2 digits percent
-// 	* @param {value} double to be cast 
-// 	* @return two digits percent
-// 	**/
-// 	castFloatPercent(value: number): string{
-// 		return this.peopleHelper.castFloatPercet(value);
-// 	}
 
 }

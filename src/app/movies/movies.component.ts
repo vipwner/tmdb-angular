@@ -23,6 +23,9 @@ import { TmdbImgService } from './../services/tmdb-img.service';
 export class MoviesComponent implements OnInit {
 
   movies = [];
+  public showMovies = false;
+  public showMovieDetail = false;
+  movieID = "";
   // Initializes
   constructor(private tmdbService:TmdbService, private router:Router,
   private tmdbImgService:TmdbImgService) { }
@@ -30,6 +33,8 @@ export class MoviesComponent implements OnInit {
   ngOnInit() {
     this.tmdbService.getMovies().subscribe(response => {
 						this.movies = response;
+						this.showMovies =true;
+						console.log(response);
     });
   }
   
@@ -42,6 +47,14 @@ export class MoviesComponent implements OnInit {
 		return this.tmdbImgService.getImgUrl(src);
   }
  
+ onSelect(id:string){
+    this.showMovies = false;
+    this.showMovieDetail = true;
+    console.log(id);
+    this.movieID = id;
+    //console.log(person);
+    //this.person = person;
+  }
   
 
 }

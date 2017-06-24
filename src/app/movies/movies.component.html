@@ -1,8 +1,14 @@
 <div class="col-md-12" >
-    <div class="col-md-3" *ngFor="let movie of movies ">
-         <a title="{{ movie.title }}" ng-if="movie.poster_path">
-        <img id="img-list" src="{{getImgUrl(movie.poster_path)}}" alt="Poster of movie: {{movie.original_title}}" width="30%" height="30%" />
-        </a>
-        <p>    
+    <div *ngIf="showMovies"> 
+        <div class="col-md-3" *ngFor="let movie of movies " (click)="onSelect(movie.id)">
+             <a title="{{ movie.title }}" ng-if="movie.poster_path">
+            <img id="img-list" src="{{getImgUrl(movie.poster_path)}}" alt="Poster of movie: {{movie.original_title}}" width="30%" height="30%" />
+            </a>
+            <p>    
+        </div>
+    </div>
+    
+    <div *ngIf="showMovieDetail">
+        <app-movie-detail [movieID]="movieID"></app-movie-detail>
     </div>
 </div>
