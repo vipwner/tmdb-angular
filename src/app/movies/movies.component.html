@@ -1,6 +1,8 @@
 <div class="col-md-12" >
     <div class="col-md-3" *ngFor="let movie of movies ">
+         <a [routerLink]="['/movie', movie.id]" title="{{ movie.title }}" ng-if="movie.poster_path">
         <img id="img-list" src="{{getImgUrl(movie.poster_path)}}" alt="Poster of movie: {{movie.original_title}}" width="30%" height="30%" />
+        </a>
         <p>    
     </div>
 </div>

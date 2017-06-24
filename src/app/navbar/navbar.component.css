@@ -5,13 +5,13 @@
 header{
     height: 90px;
     line-height: 38px;
-    background-color: #000000;
+    /*background-color: #000000;*/
     /*Opacity start*/
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     filter: alpha(opacity=80);
     -moz-opacity: 0.80;
     -khtml-opacity: 0.8;
-    opacity: 0.8;
+    opacity: 0.1;
     /*Opacity end*/
     position: fixed;
      z-index: 9999;
@@ -24,4 +24,7 @@ header{
     top: -90px;
 }
 
-
+.main-menu {
+    margin-top: 28px;
+    margin-right: 10px;
+}
