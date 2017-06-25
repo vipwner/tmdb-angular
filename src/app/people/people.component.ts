@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
 import { Observable }        from 'rxjs/Observable';
 import { Subject }           from 'rxjs/Subject';
+import {EmitterService} from './../emitter';
  
 // Observable class extensions
 import 'rxjs/add/observable/of';
@@ -19,8 +20,10 @@ export class PeopleComponent implements OnInit {
 
   people = [];
   personID = "";
+  personIDsearch = "";
   public showPeople = false;
   public showPeopleDetail = false;
+  public showPersonDetailSearched = false;
   title = "Full Cast & Crew";
   // Initializes
   constructor(private peopleService: PeopleService, private router:Router, private tmdbImgService:TmdbImgService ) { }
@@ -32,6 +35,8 @@ export class PeopleComponent implements OnInit {
 			this.showPeople = true;
 			console.log(response);
 		});
+		EmitterService.get("personDetail").subscribe(data => {
+    this.selectPersonSearched(data)});
   }
   
   onSelect(id:string){
@@ -51,5 +56,10 @@ export class PeopleComponent implements OnInit {
 		return this.tmdbImgService.getImgUrl(src);
 	}
 	
-
+  selectPersonSearched(id:string){
+    this.showPersonDetailSearched = true;
+    this.showPeople = false;
+    this.showPeopleDetail = false;
+    this.personIDsearch = id;
+  }
 }

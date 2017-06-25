@@ -1,0 +1,16 @@
+
+<input type="text" id="search-input" class="form-control input-white" placeholder="Find Movies, TV shows, Celebrities and more..." [(ngModel)]="query" (ngModelChange)="search()">
+
+<div id="search-results">
+	        <div *ngFor="let match of results">
+	            <!--<div *ngIf = "isMovie">-->
+	                <a scrollTo href="#movies" (click)="onSelect(match.id, match.media_type)">{{ match.title }}</a>
+	            <!--</div>-->
+	            <!--<div *ngIf = "isTv">-->
+	                <a scrollTo href="#" (click)="onSelect(match.id, match.media_type)">{{ match.name }}</a>
+	            <!--</div>-->
+	            <!--<div *ngIf = "isPerson">-->
+	                <a scrollTo href="#people" (click)="onSelect(match.id, match.media_type)">{{ match.name }}</a>
+	            <!--</div>-->
+	        </div>
+</div>

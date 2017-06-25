@@ -9,6 +9,10 @@
     </div>
     
     <div *ngIf="showMovieDetail">
-        <app-movie-detail [movieID]="movieID"></app-movie-detail>
+        <app-movie-detail [IdMovie]="movieID"></app-movie-detail>
+    </div>
+    
+    <div *ngIf = "showMovieDetailSearched">
+        <app-movie-detail [IdMovie]="movieIDsearch"></app-movie-detail>
     </div>
 </div>

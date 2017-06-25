@@ -9,13 +9,15 @@ import { MovieDetailService } from './../services/movie-detail.service';
   styleUrls: ['./movie-detail.component.css']
 })
 export class MovieDetailComponent implements OnInit {
-  @Input() movieID:string;
+  @Input() IdMovie:string;
   
   movie: Object = {};
   constructor(private movieDetailService: MovieDetailService) { }
 
   ngOnInit() {
-    this.movieDetailService.getMovieInfo(this.movieID).subscribe(response => {
+    this.movieDetailService.getMovieInfo(this.IdMovie).subscribe(response => {
+      console.log("Id movie selected");
+      console.log(this.IdMovie);
 			this.movie = response;
 			console.log(response);
 		});

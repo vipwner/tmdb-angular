@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router }            from '@angular/router';
  
 import { Observable }        from 'rxjs/Observable';
 import { Subject }           from 'rxjs/Subject';
+
  
 // Observable class extensions
 import 'rxjs/add/observable/of';
@@ -14,20 +14,23 @@ import 'rxjs/add/operator/distinctUntilChanged';
 
 import { TmdbService } from './../services/tmdb.service';
 import { TmdbImgService } from './../services/tmdb-img.service';
-
+import { EmitterService } from './../emitter';
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
-
+  
+ 
   movies = [];
-  public showMovies = false;
-  public showMovieDetail = false;
-  movieID = "";
+  public movieIDsearch = "";
+  public showMovies = this.tmdbService.showMovies;
+  public showMovieDetail = this.tmdbService.showMovieDetail;
+  public showMovieDetailSearched = false;
+  public movieID = "";
   // Initializes
-  constructor(private tmdbService:TmdbService, private router:Router,
+  constructor(private tmdbService:TmdbService,
   private tmdbImgService:TmdbImgService) { }
 
   ngOnInit() {
@@ -35,7 +38,11 @@ export class MoviesComponent implements OnInit {
 						this.movies = response;
 						this.showMovies =true;
 						console.log(response);
+						
+						
     });
+     EmitterService.get("movieDetail").subscribe(data => {
+    this.selectMovieSearched(data)});
   }
   
   /**
@@ -48,13 +55,21 @@ export class MoviesComponent implements OnInit {
   }
  
  onSelect(id:string){
+    
     this.showMovies = false;
     this.showMovieDetail = true;
     console.log(id);
     this.movieID = id;
-    //console.log(person);
-    //this.person = person;
   }
   
-
+  selectMovieSearched(id:string){
+    
+    this.showMovies = false;
+    this.showMovieDetail = false;
+    this.showMovieDetailSearched = true;
+    console.log("Selected id");
+    console.log(id);
+    this.movieIDsearch = id;
+  }
+ 
 }

@@ -9,7 +9,7 @@ export class MovieDetailService {
   baseUrl: string = "https://api.themoviedb.org/3/movie";
   // Jhon's API-Key
   apiKey: string = "f9f09a70d4cb6d872c1f8aa8bc859cc3";
-  
+
   constructor(private http: Http) { }
   
   	/**
@@ -23,7 +23,6 @@ export class MovieDetailService {
 			return response.json(); 
 		})
 	}
-
-
+    
 
 }

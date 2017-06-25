@@ -11,6 +11,9 @@ baseUrl: string = "https://api.themoviedb.org/3/movie";
 //Jhon's API-Key
 apiKey: string = "f9f09a70d4cb6d872c1f8aa8bc859cc3";
 
+public showMovies = false;
+  public showMovieDetail = false;
+
 constructor(private http: Http) { }
       
 getMovies():Observable<any>{
