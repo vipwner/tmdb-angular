@@ -44,16 +44,15 @@ export class SearchComponent implements OnInit {
 	}
 	
 	onSelect(id:string, mediaType:string){
-	  this.matchID = id;
-	  this.matchType = mediaType;
-	  console.log(this.matchID);
-	  console.log(this.matchType);
-	  if (mediaType = "movie")
+		console.log(mediaType);
+	  if (mediaType == "movie"){
 	  	EmitterService.get("movieDetail").emit(id);
-	  else if (mediaType ="person")
+	  	console.log("movie select on search");}
+	  else if (mediaType == "person"){
 	  	EmitterService.get("personDetail").emit(id);
-	  else
-	   console.log("nothing")
+	  	console.log("person selected on search");}
+	  else{
+	   console.log("nothing");}
 	  
 	}
 }

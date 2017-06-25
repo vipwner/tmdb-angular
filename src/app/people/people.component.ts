@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router }            from '@angular/router';
 import { Observable }        from 'rxjs/Observable';
 import { Subject }           from 'rxjs/Subject';
 import {EmitterService} from './../emitter';
@@ -26,7 +25,7 @@ export class PeopleComponent implements OnInit {
   public showPersonDetailSearched = false;
   title = "Full Cast & Crew";
   // Initializes
-  constructor(private peopleService: PeopleService, private router:Router, private tmdbImgService:TmdbImgService ) { }
+  constructor(private peopleService: PeopleService, private tmdbImgService:TmdbImgService ) { }
   
   
   ngOnInit() {
@@ -36,6 +35,7 @@ export class PeopleComponent implements OnInit {
 			console.log(response);
 		});
 		EmitterService.get("personDetail").subscribe(data => {
+		  console.log("person arrive");
     this.selectPersonSearched(data)});
   }
   
@@ -57,9 +57,9 @@ export class PeopleComponent implements OnInit {
 	}
 	
   selectPersonSearched(id:string){
-    this.showPersonDetailSearched = true;
     this.showPeople = false;
     this.showPeopleDetail = false;
+    this.showPersonDetailSearched = true;
     this.personIDsearch = id;
   }
 }

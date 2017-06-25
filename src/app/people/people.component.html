@@ -7,6 +7,11 @@
     </div>
     
     <div *ngIf="showPeopleDetail">
-        <app-people-detail [personID]="personID"></app-people-detail>-->
+        <app-people-detail [personID]="personID"></app-people-detail>
+    </div>
+    
+    <div *ngIf="showPersonDetailSearched">
+        
+         <app-people-detail [personID]="personIDsearch"></app-people-detail>
     </div>
 </div>
