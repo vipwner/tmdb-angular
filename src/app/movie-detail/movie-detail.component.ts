@@ -1,5 +1,4 @@
 import { Component, OnInit, Input} from '@angular/core';
-import { Router }            from '@angular/router';
 import { Observable }        from 'rxjs/Observable';
 // Services' imports
 import { MovieDetailService } from './../services/movie-detail.service';
@@ -11,9 +10,9 @@ import { MovieDetailService } from './../services/movie-detail.service';
 })
 export class MovieDetailComponent implements OnInit {
   @Input() movieID:string;
+  
   movie: Object = {};
-  constructor(private movieDetailService: MovieDetailService,
-		private router: Router) { }
+  constructor(private movieDetailService: MovieDetailService) { }
 
   ngOnInit() {
     this.movieDetailService.getMovieInfo(this.movieID).subscribe(response => {
