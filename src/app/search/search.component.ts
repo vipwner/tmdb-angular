@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { SearchService } from './../services/search.service';
-import { MovieDetailService } from './../services/movie-detail.service';
 import {EmitterService} from './../emitter';
 
 @Component({
@@ -14,11 +13,10 @@ export class SearchComponent implements OnInit {
   query = "";
   matchID = "";
   matchType = "";
-  
   results: Object[] = [];
 	totalResult: number = 0;
 	
-  constructor(private searchService:SearchService, private movieDetailService:MovieDetailService) { }
+  constructor(private searchService:SearchService) { }
 
   ngOnInit() {
   }
@@ -51,8 +49,11 @@ export class SearchComponent implements OnInit {
 	  else if (mediaType == "person"){
 	  	EmitterService.get("personDetail").emit(id);
 	  	console.log("person selected on search");}
-	  else{
-	   console.log("nothing");}
+	  else if (mediaType =="tv"){
+	  //	EmitterService.get("tvDetail").emit(id);
+	   console.log("nothing");
+	  }
 	  
 	}
+	
 }
