@@ -25,8 +25,8 @@ export class MoviesComponent implements OnInit {
  
   movies = [];
   public movieIDsearch = "";
-  public showMovies = this.tmdbService.showMovies;
-  public showMovieDetail = this.tmdbService.showMovieDetail;
+  public showMovies = false;
+  public showMovieDetail = false;
   public showMovieDetailSearched = false;
   public movieID = "";
   // Initializes
@@ -38,7 +38,6 @@ export class MoviesComponent implements OnInit {
 						this.movies = response;
 						this.showMovies =true;
 						console.log(response);
-						
 						
     });
      EmitterService.get("movieDetail").subscribe(data => {
