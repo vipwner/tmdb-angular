@@ -1,16 +1,21 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+/**
+ * Navbar's component unit tests
+ *
+ * @author Jhon Pantoja <jhon.pantoja@correounivalle.edu.co>
+ *
+ */
 
-import { NavbarComponent } from './navbar.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {NavbarComponent} from './navbar.component';
 
 describe('NavbarComponent', () => {
-  let component: NavbarComponent;
-  let fixture: ComponentFixture<NavbarComponent>;
+  let component : NavbarComponent;
+  let fixture : ComponentFixture < NavbarComponent >;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ NavbarComponent ]
-    })
-    .compileComponents();
+    TestBed
+      .configureTestingModule({declarations: [NavbarComponent]})
+      .compileComponents();
   }));
 
   beforeEach(() => {

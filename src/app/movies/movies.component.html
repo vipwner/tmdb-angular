@@ -1,18 +1,21 @@
-<div class="col-md-12" >
-    <div *ngIf="showMovies"> 
-        <div class="col-md-3" *ngFor="let movie of movies " (click)="onSelect(movie.id)">
-             <a title="{{ movie.title }}" ng-if="movie.poster_path">
+<!-- MOVIE'S HTML BEGIN -->
+<div class="col-md-12">
+  <!-- Popular movies -->
+  <div *ngIf="showMovies">
+    <div class="col-md-3" *ngFor="let movie of movies " (click)="onSelect(movie.id)">
+      <a title="{{ movie.title }}" ng-if="movie.poster_path">
             <img id="img-list" src="{{getImgUrl(movie.poster_path)}}" alt="Poster of movie: {{movie.original_title}}" width="30%" height="30%" />
             </a>
-            <p>    
-        </div>
+      <p>
     </div>
-    
-    <div *ngIf="showMovieDetail">
-        <app-movie-detail [IdMovie]="movieID"></app-movie-detail>
-    </div>
-    
-    <div *ngIf = "showMovieDetailSearched">
-        <app-movie-detail [IdMovie]="movieIDsearch"></app-movie-detail>
-    </div>
+  </div>
+  <!-- Movie's detail -->
+  <div *ngIf="showMovieDetail">
+    <app-movie-detail [IdMovie]="movieID"></app-movie-detail>
+  </div>
+  <!-- Movie's detail searched -->
+  <div *ngIf="showMovieDetailSearched">
+    <app-movie-detail [IdMovie]="movieIDsearch"></app-movie-detail>
+  </div>
 </div>
+<!-- MOVIE'S HTML END -->

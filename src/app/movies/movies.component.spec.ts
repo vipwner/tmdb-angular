@@ -1,16 +1,21 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+/**
+ * Movies' component unit tests
+ *
+ * @author Jhon Pantoja <jhon.pantoja@correounivalle.edu.co>
+ *
+ */
 
-import { MoviesComponent } from './movies.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {MoviesComponent} from './movies.component';
 
 describe('MoviesComponent', () => {
-  let component: MoviesComponent;
-  let fixture: ComponentFixture<MoviesComponent>;
+  let component : MoviesComponent;
+  let fixture : ComponentFixture < MoviesComponent >;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ MoviesComponent ]
-    })
-    .compileComponents();
+    TestBed
+      .configureTestingModule({declarations: [MoviesComponent]})
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,16 +1,21 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+/**
+ * People-detail's component unit tests
+ *
+ * @author Jhon Pantoja <jhon.pantoja@correounivalle.edu.co>
+ *
+ */
 
-import { PeopleDetailComponent } from './people-detail.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {PeopleDetailComponent} from './people-detail.component';
 
 describe('PeopleDetailComponent', () => {
-  let component: PeopleDetailComponent;
-  let fixture: ComponentFixture<PeopleDetailComponent>;
+  let component : PeopleDetailComponent;
+  let fixture : ComponentFixture < PeopleDetailComponent >;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ PeopleDetailComponent ]
-    })
-    .compileComponents();
+    TestBed
+      .configureTestingModule({declarations: [PeopleDetailComponent]})
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,16 +1,22 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ContentComponent } from './content.component';
+/**
+ * Content's component unit tests
+ *
+ * @author Jhon Pantoja <jhon.pantoja@correounivalle.edu.co>
+ *
+ */
+// Core imports
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+// Component import
+import {ContentComponent} from './content.component';
 
 describe('ContentComponent', () => {
-  let component: ContentComponent;
-  let fixture: ComponentFixture<ContentComponent>;
+  let component : ContentComponent;
+  let fixture : ComponentFixture < ContentComponent >;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ ContentComponent ]
-    })
-    .compileComponents();
+    TestBed
+      .configureTestingModule({declarations: [ContentComponent]})
+      .compileComponents();
   }));
 
   beforeEach(() => {

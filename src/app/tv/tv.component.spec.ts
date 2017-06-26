@@ -1,16 +1,21 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+/**
+ * Tv shows' component unit tests
+ *
+ * @author Jhon Pantoja <jhon.pantoja@correounivalle.edu.co>
+ *
+ */
 
-import { TvComponent } from './tv.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {TvComponent} from './tv.component';
 
 describe('TvComponent', () => {
-  let component: TvComponent;
-  let fixture: ComponentFixture<TvComponent>;
+  let component : TvComponent;
+  let fixture : ComponentFixture < TvComponent >;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ TvComponent ]
-    })
-    .compileComponents();
+    TestBed
+      .configureTestingModule({declarations: [TvComponent]})
+      .compileComponents();
   }));
 
   beforeEach(() => {
