@@ -1,3 +1,10 @@
+/**
+ * Tv-detail's service class
+ *
+ * Class that set up the tv-detail's service implementation
+ * @author Jhon Pantoja <jhon.pantoja@correounivalle.edu.co>
+ *
+ */
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable }     from 'rxjs/Observable';
@@ -12,10 +19,12 @@ export class TvDetailService {
   constructor(private http:Http) { }
   
   /**
-	* This method returns tv show's information.
-	* @param {id} Tv show's identifier in the TMDB's API.
-	* @return Http's response in Observable.
-	**/
+   * This method get the tv show's info from the TMDB's API
+   * Given an Tv show's identifier
+   * @param {id}
+   * @returns {Observable<any>}
+   * @memberof TvService
+   */
 	getTvInfo(id: string): Observable<any>{
 		return this.http.get(`${this.baseUrl}/${id}?api_key=${this.apiKey}`)
 		.map(response => {
