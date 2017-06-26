@@ -1,15 +1,19 @@
-import { TestBed, inject } from '@angular/core/testing';
+/**
+ * Movie-detail's service unit tests
+ *
+ * @author Jhon Pantoja <jhon.pantoja@correounivalle.edu.co>
+ *
+ */
 
-import { MovieDetailService } from './movie-detail.service';
+import {TestBed, inject} from '@angular/core/testing';
+import {MovieDetailService} from './movie-detail.service';
 
 describe('MovieDetailService', () => {
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [MovieDetailService]
-    });
+    TestBed.configureTestingModule({providers: [MovieDetailService]});
   });
 
-  it('should be created', inject([MovieDetailService], (service: MovieDetailService) => {
+  it('should be created', inject([MovieDetailService], (service : MovieDetailService) => {
     expect(service).toBeTruthy();
   }));
 });
