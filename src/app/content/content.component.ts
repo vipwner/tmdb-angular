@@ -1,12 +1,12 @@
 /**
- * Content's component
+ * Content's component class
  *
- * Principal component of app's content
+ * Principal class for the component of app's content
  * @author Jhon Pantoja <jhon.pantoja@correounivalle.edu.co>
  *
  */
 
-// Core imports
+// Core importations
 import {Component, OnInit} from '@angular/core';
 
 @Component({selector: 'app-content', templateUrl: './content.component.html', styleUrls: ['./content.component.css']})

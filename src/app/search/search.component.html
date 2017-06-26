@@ -1,10 +1,13 @@
-
-<input type="text" id="search-input" class="form-control input-white" placeholder="Find Movies, TV shows, Celebrities and more..." [(ngModel)]="query" (ngModelChange)="search()">
-
+<!-- SEARCH'S HTML BEGIN -->
+<!-- Input search -->
+<input type="text" id="search-input" class="form-control input-white" placeholder="Find Movies, TV shows, Celebrities and more..."
+  [(ngModel)]="query" (ngModelChange)="search()">
+<!-- Search's results -->
 <div id="search-results">
-	        <div *ngFor="let match of results" (ngModelChange)="setType()">
-	        		<a scrollTo href="#movies" (click)="onSelect(match.id, match.media_type)">{{ match.title }}</a>
-	                <a scrollTo href="#tv" (click)="onSelect(match.id, match.media_type)">{{ match.name }}</a>
-	                <a scrollTo href="#people" (click)="onSelect(match.id, match.media_type)">{{ match.name }}</a>
-	        </div>
+  <div *ngFor="let match of results" (ngModelChange)="setType()">
+    <a scrollTo href="#movies" (click)="onSelect(match.id, match.media_type)">{{ match.title }}</a>
+    <a scrollTo href="#tv" (click)="onSelect(match.id, match.media_type)">{{ match.name }}</a>
+    <a scrollTo href="#people" (click)="onSelect(match.id, match.media_type)">{{ match.name }}</a>
+  </div>
 </div>
+<!-- SEARCH'S HTML END -->

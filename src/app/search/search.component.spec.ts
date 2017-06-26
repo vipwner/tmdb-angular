@@ -1,16 +1,21 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+/**
+ * Search's component unit tests
+ *
+ * @author Jhon Pantoja <jhon.pantoja@correounivalle.edu.co>
+ *
+ */
 
-import { SearchComponent } from './search.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {SearchComponent} from './search.component';
 
 describe('SearchComponent', () => {
-  let component: SearchComponent;
-  let fixture: ComponentFixture<SearchComponent>;
+  let component : SearchComponent;
+  let fixture : ComponentFixture < SearchComponent >;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ SearchComponent ]
-    })
-    .compileComponents();
+    TestBed
+      .configureTestingModule({declarations: [SearchComponent]})
+      .compileComponents();
   }));
 
   beforeEach(() => {

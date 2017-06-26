@@ -1,17 +1,19 @@
-<div class="col-md-12" >
-    <div *ngIf="showPeople"> 
-        <div class="col-md-3" *ngFor="let person of people " (click)="onSelect(person.id)">
-            <img src="{{getImgUrl(person.profile_path)}}" alt="Profile image of {{person.name}}" width="30%" height="30%"/>
-            <p>    
-        </div>
+<!-- PEOPLE'S HTML BEGIN -->
+<div class="col-md-12">
+  <!-- People -->
+  <div *ngIf="showPeople">
+    <div class="col-md-3" *ngFor="let person of people " (click)="onSelect(person.id)">
+      <img src="{{getImgUrl(person.profile_path)}}" alt="Profile image of {{person.name}}" width="30%" height="30%" />
+      <p>
     </div>
-    
-    <div *ngIf="showPeopleDetail">
-        <app-people-detail [personID]="personID"></app-people-detail>
-    </div>
-    
-    <div *ngIf="showPersonDetailSearched">
-        
-         <app-people-detail [personID]="personIDsearch"></app-people-detail>
-    </div>
+  </div>
+  <!-- Person's detail -->
+  <div *ngIf="showPeopleDetail">
+    <app-people-detail [personID]="personID"></app-people-detail>
+  </div>
+  <!-- Person's detail searched -->
+  <div *ngIf="showPersonDetailSearched">
+    <app-people-detail [personID]="personIDsearch"></app-people-detail>
+  </div>
 </div>
+<!-- PEOPLE'S HTML END -->

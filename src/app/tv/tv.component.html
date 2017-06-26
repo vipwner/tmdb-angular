@@ -1,19 +1,22 @@
-<div class="col-md-12" >
-    <div *ngIf="showTvShows"> 
-        <div class="col-md-3" *ngFor="let show of tvShows " (click)="onSelect(show.id)">
-             <a title="{{ show.name }}" ng-if="show.poster_path">
+<!-- TVSHOWS' HTML BEGIN -->
+<div class="col-md-12">
+  <!-- Tv shows -->
+  <div *ngIf="showTvShows">
+    <div class="col-md-3" *ngFor="let show of tvShows " (click)="onSelect(show.id)">
+      <a title="{{ show.name }}" ng-if="show.poster_path">
                  a
             <img id="img-list" src="{{getImgUrl(show.poster_path)}}" alt="Poster of tv show: {{show.original_name}}" width="30%" height="30%" />
             </a>
-            <p>    
-        </div>
+      <p>
     </div>
-    
-    <div *ngIf="showTvDetail">
-        <app-tv-detail [tvID]="tvID"></app-tv-detail>
-    </div>
-    
-    <div *ngIf = "showTvDetailSearched">
-        <app-tv-detail [tvID]="tvIDsearch"></app-tv-detail>
-    </div>
+  </div>
+  <!-- Tv show detail -->
+  <div *ngIf="showTvDetail">
+    <app-tv-detail [tvID]="tvID"></app-tv-detail>
+  </div>
+  <!-- Tv show detail searched -->
+  <div *ngIf="showTvDetailSearched">
+    <app-tv-detail [tvID]="tvIDsearch"></app-tv-detail>
+  </div>
 </div>
+<!-- TVSHOWS' HTML END -->

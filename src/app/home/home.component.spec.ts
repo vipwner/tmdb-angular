@@ -1,16 +1,23 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+/**
+ * Home's component unit tests
+ *
+ * @author Jhon Pantoja <jhon.pantoja@correounivalle.edu.co>
+ *
+ */
 
-import { HomeComponent } from './home.component';
+// Core importations
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+// Component's importation
+import {HomeComponent} from './home.component';
 
 describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+  let component : HomeComponent;
+  let fixture : ComponentFixture < HomeComponent >;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
-    })
-    .compileComponents();
+    TestBed
+      .configureTestingModule({declarations: [HomeComponent]})
+      .compileComponents();
   }));
 
   beforeEach(() => {
