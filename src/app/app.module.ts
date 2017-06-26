@@ -12,6 +12,8 @@ import { PeopleService } from './services/people.service';
 import { PeopleDetailService } from './services/people-detail.service';
 import { MovieDetailService } from './services/movie-detail.service';
 import { SearchService } from './services/search.service';
+import { TvService } from './services/tv.service';
+import { TvDetailService } from './services/tv-detail.service';
 // Routing.
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -23,6 +25,8 @@ import { PeopleComponent } from './people/people.component';
 import { PeopleDetailComponent } from './people-detail/people-detail.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { SearchComponent } from './search/search.component';
+import { TvComponent } from './tv/tv.component';
+import { TvDetailComponent } from './tv-detail/tv-detail.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,9 @@ import { SearchComponent } from './search/search.component';
     PeopleComponent,
     PeopleDetailComponent,
     MovieDetailComponent,
-    SearchComponent
+    SearchComponent,
+    TvComponent,
+    TvDetailComponent
     
   ],
   imports: [
@@ -49,7 +55,9 @@ import { SearchComponent } from './search/search.component';
   PeopleService,
   PeopleDetailService,
   MovieDetailService,
-  SearchService],
+  SearchService,
+  TvService,
+  TvDetailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
