@@ -5,6 +5,7 @@ import { Subject }           from 'rxjs/Subject';
 import 'rxjs/add/observable/of';
 import { TvService }         from './../services/tv.service';
 import { TmdbImgService } from './../services/tmdb-img.service';
+import { EmitterService } from './../emitter';
 @Component({
   selector: 'app-tv',
   templateUrl: './tv.component.html',
@@ -28,6 +29,8 @@ export class TvComponent implements OnInit {
 						console.log(response);
 						
     });
+    EmitterService.get("tvDetail").subscribe(data => {
+    this.selectTvShowSearched(data)});
   }
    /**
 	* This method return image's url of TMDB's API.
@@ -44,6 +47,12 @@ export class TvComponent implements OnInit {
     this.showTvDetail = true;
     console.log(id);
     this.tvID = id;
+  }
+  selectTvShowSearched(id:string){
+    this.showTvShows = false;
+    this.showTvDetail = false;
+    this.showTvDetailSearched = true;
+    this.tvIDsearch = id;
   }
 
 }

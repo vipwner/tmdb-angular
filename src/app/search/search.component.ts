@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { SearchService } from './../services/search.service';
-import {EmitterService} from './../emitter';
+import { EmitterService } from './../emitter';
 
 @Component({
   selector: 'app-search',
@@ -50,8 +50,8 @@ export class SearchComponent implements OnInit {
 	  	EmitterService.get("personDetail").emit(id);
 	  	console.log("person selected on search");}
 	  else if (mediaType =="tv"){
-	  //	EmitterService.get("tvDetail").emit(id);
-	   console.log("nothing");
+	  	EmitterService.get("tvDetail").emit(id);
+	   console.log("tv selected on search");
 	  }
 	  
 	}
