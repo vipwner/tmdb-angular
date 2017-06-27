@@ -1,4 +1,18 @@
-# Angular 4
+# FAST-MOVIES
+
+A  TMDB's client app developed in [Angular 4](https://angular.io/) in the Alert Logic Inc's course. It was implemented with no routes, just components, services and event emitters; a single one page Web App. Besides, the principal app's resources are:
+
+* Movies,TvShows, People - Components && Services
+
+They will allow you to:
+
+* Find Movies, see Movies' detail, see Popular Movies
+* Find TvShows, see a Tv show's detail, see Popular Tv Shows
+* Find People, see Person's detail, see Popular celebrities
+
+**Author:** Jhon Pantoja
+
+# Notes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
 
