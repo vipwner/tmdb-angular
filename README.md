@@ -12,6 +12,13 @@ They will allow you to:
 
 **Author:** Jhon Pantoja
 
+## Deployment
+
+For github pages deployment use:
+* Verify if `"deploy": "ngh"` is added to the package's scripts
+* `ng build --prod -base-href .` (IMPORTANT! DO NOT FORGET THE '.') 
+* `npm run deploy`
+
 # Notes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
