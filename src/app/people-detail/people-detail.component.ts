@@ -11,6 +11,8 @@ import {Observable} from 'rxjs/Observable';
 import {PeopleDetailService} from './../services/people-detail.service';
 import {TmdbImgService} from './../services/tmdb-img.service';
 
+import {EmitterService} from './../emitter';
+
 @Component({selector: 'app-people-detail', templateUrl: './people-detail.component.html', styleUrls: ['./people-detail.component.css']})
 export class PeopleDetailComponent implements OnInit {
 
@@ -57,6 +59,12 @@ export class PeopleDetailComponent implements OnInit {
     return this
       .tmdbImgService
       .getImgUrl(src);
+  }
+  
+  goBack(id:string){
+    EmitterService
+					.get("showPeople")
+					.emit(id);
   }
 
 }

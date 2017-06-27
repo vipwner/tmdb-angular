@@ -7,6 +7,8 @@
                  <p>{{tvShow.last_air_date | date:'d'}}
                      {{tvShow.last_air_date | date:'MMM'}}<p>
                 </span>
+                <div class ="back"(click)="goBack()" > <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span> Back!</div>
+                 
             </div>
             <div class="col-md-9">
                 <h1>{{tvShow.original_name}} <b>({{tvShow.last_air_date | date:'y'}})</b></h1>
@@ -27,9 +29,6 @@
                 </div>
                 <div class="col-md-8 detail">
                     <p>{{tvShow.overview}}</p>
-                    <!--<div class="video">-->
-                    <!--    <iframe width="560" height="315" [src]="gettvShowVideoUrl(video.key) | safe" frameborder="0" allowfullscreen></iframe>-->
-                    <!--</div>-->
                 </div>
             </div>
         </div>

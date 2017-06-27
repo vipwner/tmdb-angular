@@ -1,43 +1,9 @@
-/* Blur + Gray Scale */
-.hover10 figure img {
-	-webkit-filter: grayscale(0) blur(0);
-	filter: grayscale(0) blur(0);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-.hover10 figure:hover img {
-	-webkit-filter: grayscale(100%) blur(3px);
-	filter: grayscale(100%) blur(3px);
-}
 
-/* Gray Scale */
-.hover08 figure img {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-	position: relative;
-}
-.hover08 figure:hover img {
-	-webkit-filter: grayscale(0);
-	filter: grayscale(0);
-	position: relative;
-}
 
 .icon-film{
 	width:50px;
 	height: 50px;
 }
 
-.fix{
-	padding:0px; margin-bottom:15px !important
-}
 
-.starAverage{
-	position: absolute;
-	top:0px;
-	left:0px;
-	color:#DF3E1C;
-	text-shadow: black 0.1em 0.1em 0.2em;
-	font-size: 15px;
-}
+

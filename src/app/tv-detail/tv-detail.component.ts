@@ -11,6 +11,7 @@ import {Observable} from 'rxjs/Observable';
 //Services' importations
 import {TvDetailService} from './../services/tv-detail.service';
 import {TmdbImgService} from './../services/tmdb-img.service';
+import {EmitterService} from './../emitter';
 @Component({selector: 'app-tv-detail', templateUrl: './tv-detail.component.html', styleUrls: ['./tv-detail.component.css']})
 export class TvDetailComponent implements OnInit {
 
@@ -57,5 +58,9 @@ export class TvDetailComponent implements OnInit {
       .getImgUrl(src);
   }
 
-
+  goBack(id:string){
+    EmitterService
+					.get("showTv")
+					.emit(id);
+  }
 }

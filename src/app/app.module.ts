@@ -16,6 +16,7 @@ import { TvService } from './services/tv.service';
 import { TvDetailService } from './services/tv-detail.service';
 import { MovieHelperService } from './services/movie.helper';
 import {SafePipe} from "./pipe/safe.pipe";
+import {RoundPipe} from "./pipe/round.pipe";
 
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -43,7 +44,8 @@ import { TvDetailComponent } from './tv-detail/tv-detail.component';
     SearchComponent,
     TvComponent,
     TvDetailComponent,
-    SafePipe
+    SafePipe,
+    RoundPipe
     
   ],
   imports: [

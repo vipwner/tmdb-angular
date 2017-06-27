@@ -19,13 +19,13 @@
         <div class="col-md-2" *ngFor="let movie of movies " (click)="onSelect(movie.id)" style="padding:0px !important">
 
           <div class="hover08">
-            <a title="{{ movie.title }}" ng-if="movie.poster_path">
+            <a scrollTo href="#movies" title="{{ movie.title }}" ng-if="movie.poster_path">
               <figure>
                 <img id="img-list" src="{{getImgUrl(movie.poster_path)}}" alt="Poster of movie: {{movie.original_title}}" width="160px" height="240px" />
               </figure>
             </a>
           </div>
-          <div class="starAverage">
+          <div class="starAverage2">
             <span class="my-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"></i></span> <b>{{movie.vote_average}}</b>
           </div>
 
