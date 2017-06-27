@@ -1,13 +1,40 @@
 <!-- SEARCH'S HTML BEGIN -->
 <!-- Input search -->
-<input type="text" id="search-input" class="form-control input-white" placeholder="Find Movies, TV shows, Celebrities and more..."
-  [(ngModel)]="query" (ngModelChange)="search()">
+<input type="text" id="search-input" class="input" placeholder=" Find Movies, TV shows, Celebrities and more... " [(ngModel)]="query" (ngModelChange)="search()">
 <!-- Search's results -->
 <div id="search-results">
-  <div *ngFor="let match of results" (ngModelChange)="setType()">
-    <a scrollTo href="#movies" (click)="onSelect(match.id, match.media_type)">{{ match.title }}</a>
-    <a scrollTo href="#tv" (click)="onSelect(match.id, match.media_type)">{{ match.name }}</a>
-    <a scrollTo href="#people" (click)="onSelect(match.id, match.media_type)">{{ match.name }}</a>
+  <div *ngFor="let match of results">
+
+    <div *ngIf="!isEmpty(match.backdrop_path) || !isEmpty(match.profile_path)">
+
+      <div *ngIf="isMovie==match.media_type">
+
+        <div id="img-result-movie">
+          <img class="image-result" src="{{ getImgUrl(match.backdrop_path) }}" />
+          <a scrollTo href="#movies" (click)="onSelect(match.id, match.media_type)"><i>{{ match.title }} | ({{match.media_type}})</i></a>
+        </div>
+
+      </div>
+
+      <div *ngIf="isTv==match.media_type">
+
+        <div id="img-result-tv">
+          <img class="image-result" src="{{ getImgUrl(match.backdrop_path) }}" />
+          <a scrollTo href="#tv" (click)="onSelect(match.id, match.media_type)"><i>{{ match.name }} | ({{match.media_type}})</i></a>
+        </div>
+
+      </div>
+
+      <div *ngIf="isPerson==match.media_type">
+
+        <div id="img-result-people">
+          <img class="image-result" src="{{ getImgUrl(match.profile_path) }}" />
+          <a scrollTo href="#people" (click)="onSelect(match.id, match.media_type)"><i>{{ match.name }} | ({{match.media_type}})</i></a>
+        </div>
+
+      </div>
+
   </div>
+</div>
 </div>
 <!-- SEARCH'S HTML END -->

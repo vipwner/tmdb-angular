@@ -9,6 +9,8 @@
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {SearchService} from './../services/search.service';
 import {EmitterService} from './../emitter';
+import {TmdbImgService} from './../services/tmdb-img.service';
+import {MovieHelperService}from './../services/movie.helper';
 
 @Component({selector: 'app-search', templateUrl: './search.component.html', styleUrls: ['./search.component.css']})
 export class SearchComponent implements OnInit {
@@ -17,10 +19,13 @@ export class SearchComponent implements OnInit {
   query = "";
   matchID = "";
   matchType = "";
+  isMovie = "movie";
+  isTv = "tv";
+  isPerson="person";
   results : Object[] = [];
   totalResult : number = 0;
   // Imports' initialization
-  constructor(private searchService : SearchService) {}
+  constructor(private searchService : SearchService, private tmdbImgService:TmdbImgService, private movieHelper:MovieHelperService ) {}
 
   ngOnInit() {}
 
@@ -55,23 +60,59 @@ export class SearchComponent implements OnInit {
    * @memberof SearchComponent
   */
   onSelect(id : string, mediaType : string) {
-	console.log(mediaType);
-	if (mediaType == "movie") {
-			EmitterService
-					.get("movieDetail")
-					.emit(id);
-			console.log("movie select on search");
-	} else if (mediaType == "person") {
+	  console.log(mediaType);
+	  this.cleanInput();
+	  if (mediaType == "movie") {
+		  	EmitterService
+			  		.get("movieDetail")
+				  	.emit(id);
+			      console.log("movie select on search");
+	  } else if (mediaType == "person") {
 			EmitterService
 					.get("personDetail")
 					.emit(id);
-			console.log("person selected on search");
-	} else if (mediaType == "tv") {
+			    console.log("person selected on search");
+	  } else if (mediaType == "tv") {
 			EmitterService
 					.get("tvDetail")
 					.emit(id);
-			console.log("tv selected on search");
-	}
+			    console.log("tv selected on search");
+    }
   }
+  /**
+	* Clean query input, results array and total results
+	**/
+	cleanInput(){
+		this.query = "";
+		this.results = [];
+		this.totalResult = 0;
+	}
+/**
+	* Check it list is empty
+	* @param {list} list to be checked
+	* @return boolean value of empty state
+	**/
+	isEmpty(list){
+		return this.tmdbImgService.isEmpty(list);
+	}
+
+	/**
+	* Given a string, return the image url of tmdb api
+	* @param {src} Value to cast a tmdb url
+	* @return String with url set to tmdb format
+	**/
+	getImgUrl(src: string): string {
+		return this.tmdbImgService.getImgUrl(src);
+	}
+
+	/**
+	* Get movies names by movies object list 
+	* @param {movies} movies object list
+	* @return list of strings with movie names
+	**/
+	getMoviesNames(movies: Object[]): string{
+		let moviesList = this.movieHelper.getMoviesNames(movies).join();
+		return `${moviesList}...`;
+	}
 
 }

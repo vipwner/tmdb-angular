@@ -43,6 +43,11 @@ export class TvComponent implements OnInit {
       .subscribe(data => {
         this.selectTvShowSearched(data)
       });
+    EmitterService
+      .get("showTv")
+      .subscribe(data => {
+        this.selectMenuBar(data)
+      });
   }
 
   /**
@@ -83,5 +88,10 @@ export class TvComponent implements OnInit {
     this.showTvDetailSearched = true;
     this.tvIDsearch = id;
   }
-
+  
+  selectMenuBar(id:string){
+    this.showTvDetail = false;
+    this.showTvDetailSearched = false;
+    this.showTvShows =true;
+  }
 }

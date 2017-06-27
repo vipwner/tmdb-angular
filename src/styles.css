@@ -56,7 +56,7 @@ Modules - reusable parts of our design
 
 .cd-fixed-bg {
   position: relative;
-  min-height: 75%;
+  min-height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -117,12 +117,11 @@ Modules - reusable parts of our design
   z-index: 2;
 }
 .cd-scrolling-bg.cd-color-1 {
-  background-color: #3d3536;
+  background-color: #000000;
   
   color: #a6989a;
 }
 .cd-scrolling-bg.cd-color-2 {
-  /*  background-image: url("./assets/imgs/backgroundLife.jpg");*/
   background-color: #000000;
     /*Opacity start*/
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
@@ -150,3 +149,13 @@ Modules - reusable parts of our design
 .search{
   margin-top: 100px;
 }
+
+.detail{
+font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+ letter-spacing:0.1em;
+ text-align:center;
+ text-transform: lowercase;
+ font-size: 12pt;
+ font-variant: small-caps;
+}
+

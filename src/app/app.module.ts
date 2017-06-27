@@ -14,7 +14,9 @@ import { MovieDetailService } from './services/movie-detail.service';
 import { SearchService } from './services/search.service';
 import { TvService } from './services/tv.service';
 import { TvDetailService } from './services/tv-detail.service';
-// Routing.
+import { MovieHelperService } from './services/movie.helper';
+import {SafePipe} from "./pipe/safe.pipe";
+
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { MoviesComponent } from './movies/movies.component';
@@ -40,7 +42,8 @@ import { TvDetailComponent } from './tv-detail/tv-detail.component';
     MovieDetailComponent,
     SearchComponent,
     TvComponent,
-    TvDetailComponent
+    TvDetailComponent,
+    SafePipe
     
   ],
   imports: [
@@ -57,7 +60,8 @@ import { TvDetailComponent } from './tv-detail/tv-detail.component';
   MovieDetailService,
   SearchService,
   TvService,
-  TvDetailService],
+  TvDetailService,
+  MovieHelperService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

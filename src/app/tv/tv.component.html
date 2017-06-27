@@ -4,7 +4,7 @@
   <div *ngIf="showTvShows">
     <div class="col-md-3" *ngFor="let show of tvShows " (click)="onSelect(show.id)">
       <a title="{{ show.name }}" ng-if="show.poster_path">
-                 a
+                 
             <img id="img-list" src="{{getImgUrl(show.poster_path)}}" alt="Poster of tv show: {{show.original_name}}" width="30%" height="30%" />
             </a>
       <p>
