@@ -1,14 +1,18 @@
 <!-- MOVIE'S HTML BEGIN -->
-<div class="col-xs-12">
+<div class="col-md-12">
   <!-- Popular movies -->
   <div *ngIf="showMovies">
-    <div class="col-xs-3" *ngFor="let movie of movies " (click)="onSelect(movie.id)" style="padding:0px !important">
+    <div class="col-md-3" *ngFor="let movie of movies " (click)="onSelect(movie.id)" style="padding:0px !important">
       <a title="{{ movie.title }}" ng-if="movie.poster_path">
+        <div class="hover08">
+          <figure>
             <img id="img-list" src="{{getImgUrl(movie.poster_path)}}" alt="Poster of movie: {{movie.original_title}}" width="160px" height="240px" />
+          </figure>
+        </div>
       </a>
       <p>
     </div>
-    
+
   </div>
   <!-- Movie's detail -->
   <div *ngIf="showMovieDetail">

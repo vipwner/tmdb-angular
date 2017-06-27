@@ -3,7 +3,12 @@
   <!-- People -->
   <div *ngIf="showPeople">
     <div class="col-md-3" *ngFor="let person of people " (click)="onSelect(person.id)">
-      <img src="{{getImgUrl(person.profile_path)}}" alt="Profile image of {{person.name}}" width="30%" height="30%" />
+      <div class="hover01">
+        <figure>
+          <img src="{{getImgUrl(person.profile_path)}}" alt="Profile image of {{person.name}}" width="160px" height="240px" />
+        </figure>
+      </div>
+      <p>
       <p>
     </div>
   </div>
