@@ -13,6 +13,7 @@ import {Observable} from 'rxjs/Observable';
 import {MovieDetailService} from './../services/movie-detail.service';
 import {MovieHelperService} from '../services/movie.helper';
 import {TmdbImgService} from './../services/tmdb-img.service';
+import {EmitterService} from './../emitter';
 
 @Component({selector: 'app-movie-detail', templateUrl: './movie-detail.component.html', styleUrls: ['./movie-detail.component.css']})
 
@@ -36,16 +37,12 @@ export class MovieDetailComponent implements OnInit {
       .getMovieInfo(this.IdMovie)
       .subscribe(response => {
         console.log("Id movie selected");
-        console.log(this.IdMovie);
         this.movie = response;
-        console.log(response);
       });
     this
       .movieDetailService
       .getMovieVideos(this.IdMovie)
       .subscribe(response => {
-        console.log("Video in");
-        console.log(response);
 				this.video = response[0];
       });
   }
@@ -80,4 +77,9 @@ export class MovieDetailComponent implements OnInit {
 		return this.movieHelper.getMovieVideoUrl(value);
 	}
 
+  goBack(id:string){
+    EmitterService
+					.get("showMovies")
+					.emit(id);
+  }
 }

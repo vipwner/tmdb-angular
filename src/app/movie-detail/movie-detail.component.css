@@ -1,17 +1,10 @@
-.my-star {
-   color: yellow;
+.fixbutton{
+    margin-left: 0px;
+    border:0px;
+    border-style: 0px;
+    background-color: none;
 }
-.dateR{
-    margin-top: 20px;
+.back:hover{
+    color:red;
+    cursor:pointer;
 }
-.detail{
-font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
- letter-spacing:0.1em;
- text-align:center;
- margin: 40px auto;
- text-transform: lowercase;
- line-height: 145%;
- font-size: 14pt;
- font-variant: small-caps;
-}
-

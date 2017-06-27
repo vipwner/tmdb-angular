@@ -78,11 +78,11 @@ Modules - reusable parts of our design
   text-align: center;
   font-size: 30px;
   font-size: 1.875rem;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: black 0.1em 0.1em 0.2em;
   color: white;
 }
 .cd-fixed-bg.cd-bg-1 {
-  background-image: url("./assets/imgs/backgroundInterstellar.jpg");
+  background-image: url("./assets/imgs/backgroundWitch.jpg");
 }
 .cd-fixed-bg.cd-bg-2 {
   background-image: url("./assets/imgs/backgroundLife.jpg");
@@ -123,13 +123,6 @@ Modules - reusable parts of our design
 }
 .cd-scrolling-bg.cd-color-2 {
   background-color: #000000;
-    /*Opacity start*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-    filter: alpha(opacity=90);
-    -moz-opacity: 0.90;
-    -khtml-opacity: 0.9;
-    opacity: 0.9;
-    /*Opacity end*/
   color: #a6989a;
 }
 .cd-scrolling-bg.cd-color-3 {
@@ -156,6 +149,23 @@ font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif
  text-align:center;
  text-transform: lowercase;
  font-size: 12pt;
+ font-variant: small-caps;
+}
+
+.my-star {
+   color: yellow;
+}
+.dateR{
+    margin-top: 20px;
+}
+.detail{
+font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+ letter-spacing:0.1em;
+ text-align:center;
+ margin: 40px auto;
+ text-transform: lowercase;
+ line-height: 145%;
+ font-size: 14pt;
  font-variant: small-caps;
 }
 
