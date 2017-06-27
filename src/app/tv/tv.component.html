@@ -1,0 +1,44 @@
+<!-- TVSHOWS' HTML BEGIN -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- Tv shows -->
+      <div *ngIf="showTvShows">
+        <div class="col-md-12 fix">
+          <div class="col-md-8 fix">
+            <div class="col-md-2 fix">
+              <i class="fa fa-television fa-4x" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-6">
+              <h1>TV Shows</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2" *ngFor="let show of tvShows " (click)="onSelect(show.id)">
+          <div class="hover08">
+            <a scrollTo href="#tv" title="{{ show.name }}" ng-if="show.poster_path">
+              <figure>
+                <img id="img-list" src="{{getImgUrl(show.poster_path)}}" alt="Poster of tv show: {{show.original_name}}" width="160px" height="240px" />
+              </figure>
+            </a>
+          </div>
+          <div class="starAverage2">
+            <span class="my-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"></i></span> <b>{{show.vote_average}}</b>
+          </div>
+          <p></p>
+        </div>
+      </div>
+      <!-- Tv show detail -->
+      <div *ngIf="showTvDetail">
+        <app-tv-detail [tvID]="tvID"></app-tv-detail>
+      </div>
+      <!-- Tv show detail searched -->
+      <div *ngIf="showTvDetailSearched">
+        <app-tv-detail [tvID]="tvIDsearch"></app-tv-detail>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TVSHOWS' HTML END -->
