@@ -14,6 +14,7 @@ import {MovieDetailService} from './../services/movie-detail.service';
 import {MovieHelperService} from '../services/movie.helper';
 import {TmdbImgService} from './../services/tmdb-img.service';
 import {EmitterService} from './../emitter';
+import { Movie } from '../logical/movie';
 
 @Component({selector: 'app-movie-detail', templateUrl: './movie-detail.component.html', styleUrls: ['./movie-detail.component.css']})
 
@@ -24,8 +25,10 @@ export class MovieDetailComponent implements OnInit {
    */
   @Input()IdMovie : string;
   // Class' attributes
-  movie : Object = {};
-  video: Object = {};
+  //movie : Object = {};
+  movie: Movie;
+  //video: Object = {};
+  video;
   // Imports' initializations
   constructor(private movieDetailService : MovieDetailService, private tmdbImgService:TmdbImgService, private movieHelper:MovieHelperService) {}
 

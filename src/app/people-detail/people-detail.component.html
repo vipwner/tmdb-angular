@@ -3,8 +3,8 @@
         <div class="col-md-12">
 
             <div class="col-md-4">
-                <h1>{{actor.name}} </h1>
-                <div class ="back" (click)="goBack()" > <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span> Back!</div>
+                <h1>{{name}} </h1>
+                <div class ="back" (click)="goBack('1')" > <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span> Back!</div>
                  
             </div>
             <div class="col-md-6 born">
@@ -22,7 +22,7 @@
             <div class="col-md-12">
                 <hr/>
                 <div class="col-md-4">
-                    <img id="img-list" src="{{getImgUrl(actor.profile_path)}}" alt="Picture of actor: {{actor.name}}" width="320px" height="480px" />
+                    <img id="img-list" src="{{getImgUrl(actor.profile_path)}}" alt="Picture of actor: {{name}}" width="320px" height="480px" />
                 </div>
                 <div class="col-md-8 detail">
                     <p>{{actor.biography}}</p>

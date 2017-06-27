@@ -12,6 +12,7 @@ import {Observable} from 'rxjs/Observable';
 import {TvDetailService} from './../services/tv-detail.service';
 import {TmdbImgService} from './../services/tmdb-img.service';
 import {EmitterService} from './../emitter';
+import { Tv } from '../logical/tv';
 @Component({selector: 'app-tv-detail', templateUrl: './tv-detail.component.html', styleUrls: ['./tv-detail.component.css']})
 export class TvDetailComponent implements OnInit {
 
@@ -21,7 +22,7 @@ export class TvDetailComponent implements OnInit {
    */
   @Input()tvID : string;
   // Class' attributes
-  tvShow : Object = {};
+  tvShow : Tv;
   // Imports' initialization
   constructor(private tvDetailService : TvDetailService, private tmdbImgService:TmdbImgService) {}
   // Tv-detail's component initialization

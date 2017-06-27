@@ -10,8 +10,8 @@ import {Observable} from 'rxjs/Observable';
 // Services' importations
 import {PeopleDetailService} from './../services/people-detail.service';
 import {TmdbImgService} from './../services/tmdb-img.service';
-
 import {EmitterService} from './../emitter';
+import { Person } from '../logical/person';
 
 @Component({selector: 'app-people-detail', templateUrl: './people-detail.component.html', styleUrls: ['./people-detail.component.css']})
 export class PeopleDetailComponent implements OnInit {
@@ -23,12 +23,13 @@ export class PeopleDetailComponent implements OnInit {
   @Input()personID : string;
 
   // Class' attributes
-  actor : Object = {};
-  cast : Object[] = [];
-  crew : Object[] = [];
+  actor : Person;
+  name : string ="";
   title : string = "Actor Details!";
   // Imports' initializations
-  constructor(private peopleDetailService : PeopleDetailService, private tmdbImgService:TmdbImgService) {}
+  constructor(private peopleDetailService : PeopleDetailService, private tmdbImgService:TmdbImgService) {
+
+  }
   // People-detail's component initialization
   ngOnInit() {
     this
@@ -36,6 +37,7 @@ export class PeopleDetailComponent implements OnInit {
       .getActorDetails(this.personID)
       .subscribe(response => {
         this.actor = response;
+        this.name = this.actor.name;
         console.log(response);
       });
   }
