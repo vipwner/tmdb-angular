@@ -56,7 +56,7 @@ Modules - reusable parts of our design
 
 .cd-fixed-bg {
   position: relative;
-  min-height: 75%;
+  min-height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -78,11 +78,11 @@ Modules - reusable parts of our design
   text-align: center;
   font-size: 30px;
   font-size: 1.875rem;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: black 0.1em 0.1em 0.2em;
   color: white;
 }
 .cd-fixed-bg.cd-bg-1 {
-  background-image: url("./assets/imgs/backgroundInterstellar.jpg");
+  background-image: url("./assets/imgs/backgroundWitch.jpg");
 }
 .cd-fixed-bg.cd-bg-2 {
   background-image: url("./assets/imgs/backgroundLife.jpg");
@@ -117,20 +117,12 @@ Modules - reusable parts of our design
   z-index: 2;
 }
 .cd-scrolling-bg.cd-color-1 {
-  background-color: #3d3536;
+  background-color: #000000;
   
   color: #a6989a;
 }
 .cd-scrolling-bg.cd-color-2 {
-  /*  background-image: url("./assets/imgs/backgroundLife.jpg");*/
   background-color: #000000;
-    /*Opacity start*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-    filter: alpha(opacity=90);
-    -moz-opacity: 0.90;
-    -khtml-opacity: 0.9;
-    opacity: 0.9;
-    /*Opacity end*/
   color: #a6989a;
 }
 .cd-scrolling-bg.cd-color-3 {
@@ -149,4 +141,109 @@ Modules - reusable parts of our design
 
 .search{
   margin-top: 100px;
+}
+
+.detail{
+font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+ letter-spacing:0.1em;
+ text-align:center;
+ text-transform: lowercase;
+ font-size: 12pt;
+ font-variant: small-caps;
+}
+
+.my-star {
+   color: yellow;
+}
+.dateR{
+    margin-top: 20px;
+}
+.detail{
+font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+ letter-spacing:0.1em;
+ text-align:center;
+ margin: 40px auto;
+ text-transform: lowercase;
+ line-height: 145%;
+ font-size: 14pt;
+ font-variant: small-caps;
+}
+
+.fix{
+	padding:0px; margin-bottom:15px !important
+}
+
+/* Blur + Gray Scale */
+.hover10 figure img {
+	-webkit-filter: grayscale(0) blur(0);
+	filter: grayscale(0) blur(0);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover10 figure:hover img {
+	-webkit-filter: grayscale(100%) blur(3px);
+	filter: grayscale(100%) blur(3px);
+}
+
+/* Gray Scale */
+.hover08 figure img {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	position: relative;
+}
+.hover08 figure:hover img {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+	position: relative;
+	cursor:pointer;
+}
+
+.back:hover{
+    color:red;
+    cursor:pointer;
+}
+/* Blur */
+.hover07 figure img {
+	-webkit-filter: blur(3px);
+	filter: blur(3px);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover07 figure:hover img {
+	-webkit-filter: blur(0);
+	filter: blur(0);
+}
+
+/* Zoom Out #1 */
+.hover03 figure img {
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover03 figure:hover img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+/* Zoom Out #2 */
+.hover04 figure img {
+	width: 400px;
+	height: auto;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover04 figure:hover img {
+	width: 300px;
+}
+
+.starAverage2{
+	position: absolute;
+	top:0px;
+	left:0px;
+	color:#DF3E1C;
+	text-shadow: black 0.1em 0.1em 0.2em;
+	font-size: 15px;
 }

@@ -23,6 +23,19 @@ export class MovieDetailService {
 			return response.json(); 
 		})
 	}
+	
+	/**
+	* Get movie details requesting to the tmbd api
+	* @param {id} Movie tmdb id
+	* @return Observable with response
+	**/
+	getMovieVideos(id: string): Observable<any>{
+		let videoUrl: string = '/videos'; 
+		return this.http.get(`${this.baseUrl}/${id}${videoUrl}?api_key=${this.apiKey}`)
+		.map(response => {
+			return response.json().results; 
+		})	
+	}
     
 
 }

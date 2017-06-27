@@ -50,6 +50,11 @@ export class MoviesComponent implements OnInit {
       .subscribe(data => {
         this.selectMovieSearched(data)
       });
+    EmitterService
+      .get("showMovies")
+      .subscribe(data => {
+        this.selectMenuBar(data)
+      });
   }
 
   /**
@@ -93,5 +98,10 @@ export class MoviesComponent implements OnInit {
     console.log(id);
     this.movieIDsearch = id;
   }
-
+  
+  selectMenuBar(id:string){
+    this.showMovieDetail = false;
+    this.showMovieDetailSearched = false;
+    this.showMovies =true;
+  }
 }

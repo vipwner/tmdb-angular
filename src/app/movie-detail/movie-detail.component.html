@@ -1,3 +1,39 @@
-<p>
-  movie-detail works!
-</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-1 dateR">
+                <span class="day"><i class="fa fa-calendar fa-2x" aria-hidden="true"></i></span>
+                <span class="month">
+                 <p>{{movie.release_date | date:'d'}}
+                     {{movie.release_date | date:'MMM'}}<p>
+                </span>
+                <div class ="back"(click)="goBack()" > <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span> Back!</div>
+                 
+                
+
+            </div>
+            <div class="col-md-9">
+                <h1>{{movie.original_title}} <b>({{movie.release_date | date:'y'}})</b></h1>
+                <i>| {{getNamesList(movie.genres)}} |</i>
+            </div>
+            <div class="col-md-2">
+                <h1>
+                    <span class="my-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"></i></span> <b>{{movie.vote_average}}</b>
+                </h1>
+            </div>
+
+        </div>
+        <div class="col-md-12">
+            <hr/>
+            <div class="col-md-4">
+                <img id="img-list" src="{{getImgUrl(movie.poster_path)}}" alt="Poster of movie: {{movie.original_title}}" width="320px" height="480px" />
+            </div>
+            <div class="col-md-8 detail">
+                {{movie.overview}}
+                <div class="video">
+                    <iframe width="560" height="315" [src]="getMovieVideoUrl(video.key) | safe" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

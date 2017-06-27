@@ -1,3 +1,33 @@
-<p>
-  {{actor}}
-</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="col-md-4">
+                <h1>{{actor.name}} </h1>
+                <div class ="back" (click)="goBack()" > <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span> Back!</div>
+                 
+            </div>
+            <div class="col-md-6 born">
+                <div class="col-md-1"><i class="fa fa-birthday-cake fa-4x" aria-hidden="true"></i></div>
+                <div class="col-md-5 birthday">
+                    <h4>Born: <i> {{actor.birthday | date:'d'}} {{actor.birthday | date:'MMM'}} {{actor.birthday | date:'y'}}  </i>
+                    </h4>
+                </div>
+            </div>
+            <!--<i>| {{getNamesList(actor.genres)}} |</i>-->
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <hr/>
+                <div class="col-md-4">
+                    <img id="img-list" src="{{getImgUrl(actor.profile_path)}}" alt="Picture of actor: {{actor.name}}" width="320px" height="480px" />
+                </div>
+                <div class="col-md-8 detail">
+                    <p>{{actor.biography}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

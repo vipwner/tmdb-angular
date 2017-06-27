@@ -44,6 +44,11 @@ export class PeopleComponent implements OnInit {
         console.log("person arrive");
         this.selectPersonSearched(data)
       });
+    EmitterService
+      .get("showPeople")
+      .subscribe(data => {
+        this.selectMenuBar(data)
+      });
   }
 
   /**
@@ -83,5 +88,11 @@ export class PeopleComponent implements OnInit {
     this.showPeopleDetail = false;
     this.showPersonDetailSearched = true;
     this.personIDsearch = id;
+  }
+  
+  selectMenuBar(id:string){
+    this.showPersonDetailSearched=false;
+    this.showPeopleDetail=false;
+    this.showPeople=true;
   }
 }

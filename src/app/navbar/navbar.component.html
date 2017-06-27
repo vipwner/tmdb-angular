@@ -1,19 +1,23 @@
 <!-- NAVBAR'S HTML BEGIN -->
-<header class="nav-down navbar navbar-default navbar-fixed-top">
-  <!-- Logo -->
-  <div class="col-md-1 logo-tmdb">
-    <img src="assets/imgs/tmdb.png" width="61px" height="51px">
-  </div>
-  <!-- Search's component -->
-  <div>
-    <app-search></app-search>
-  </div>
-  <!-- Menu -->
-  <ul class="nav navbar-nav main-menu navbar-right">
-    <li><a scrollTo href="#movies">Popular Movies</a></li>
-    <li><a scrollTo href="#people">People</a></li>
-    <li><a href="#">Page 2</a></li>
-    <li><a href="#">Page 3</a></li>
-  </ul>
+<header>
+  <section id="top">
+    <nav class="navbar navbar-default" style="background-color: transparent; border-style:none !important">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a scrollTo href="#content">
+             <img class="navbar-brand" src="assets/imgs/tmdb.png">
+          </a>
+        </div>
+        <form class="navbar-form navbar-left">
+            <app-search></app-search>
+        </form> 
+        <ul class="nav navbar-nav navbar-right">
+        <li><a scrollTo href="#movies" (click)="onSelect('1')"><b>Popular Movies</b></a></li>
+        <li><a scrollTo href="#people" (click)="onSelect('2')"><b>People</b></a></li>
+        <li><a scrollTo href="#tv" (click)="onSelect('3')"><b>Tv Shows</b></a></li>
+        </ul>
+      </div>
+    </nav>
+  </section>
 </header>
 <!-- NAVBAR'S HTML END -->
