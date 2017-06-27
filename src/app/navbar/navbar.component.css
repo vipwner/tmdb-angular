@@ -49,3 +49,10 @@ header {
      right: 0;
      z-index: -1; 
 }
+
+.menuItem{
+    color: white !important
+}
+.menuItem:hover{
+   color:gray !important
+}

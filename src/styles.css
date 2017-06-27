@@ -91,7 +91,7 @@ Modules - reusable parts of our design
   background-image: url("./assets/imgs/backgroundLogan.jpg");
 }
 .cd-fixed-bg.cd-bg-4 {
-  background-image: url("./assets/imgs/backgroundAllien.jpg");
+  background-image: url("./assets/imgs/backgroundGot.jpg");
 }
 @media only screen and (min-width: 320px) {
   .cd-fixed-bg h1, .cd-fixed-bg h2 {

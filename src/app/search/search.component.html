@@ -11,7 +11,7 @@
 
         <div id="img-result-movie">
           <img class="image-result" src="{{ getImgUrl(match.backdrop_path) }}" />
-          <a scrollTo href="#movies" (click)="onSelect(match.id, match.media_type)"><i>{{ match.title }} | ({{match.media_type}})</i></a>
+          <a class="resultsSearch" scrollTo href="#movies" (click)="onSelect(match.id, match.media_type)"><i>{{ match.title }} | ({{match.media_type}})</i></a>
         </div>
 
       </div>
@@ -20,7 +20,7 @@
 
         <div id="img-result-tv">
           <img class="image-result" src="{{ getImgUrl(match.backdrop_path) }}" />
-          <a scrollTo href="#tv" (click)="onSelect(match.id, match.media_type)"><i>{{ match.name }} | ({{match.media_type}})</i></a>
+          <a class="resultsSearch" scrollTo href="#tv" (click)="onSelect(match.id, match.media_type)"><i>{{ match.name }} | ({{match.media_type}})</i></a>
         </div>
 
       </div>
@@ -29,7 +29,7 @@
 
         <div id="img-result-people">
           <img class="image-result" src="{{ getImgUrl(match.profile_path) }}" />
-          <a scrollTo href="#people" (click)="onSelect(match.id, match.media_type)"><i>{{ match.name }} | ({{match.media_type}})</i></a>
+          <a  class="resultsSearch" scrollTo href="#people" (click)="onSelect(match.id, match.media_type)"><i>{{ match.name }} | ({{match.media_type}})</i></a>
         </div>
 
       </div>
