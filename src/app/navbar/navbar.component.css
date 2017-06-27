@@ -1,27 +1,51 @@
-.logo-tmdb{
-    margin:28px 3% 0;
+.logo-tmdb {
+  margin: 28px 3% 0;
 }
 
-header{
-    height: 90px;
-    line-height: 38px;
-    background-color: #000000;
-    /*Opacity start*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-    filter: alpha(opacity=80);
-    -moz-opacity: 0.80;
-    -khtml-opacity: 0.8;
-    opacity: 0.8;
-    /*Opacity end*/
-    position: fixed;
-     z-index: 9999;
-    top: 0px;
-    transition: top 0.2s ease-in-out;
-    width: 100%;
+header {
+  height: 90px;
+  line-height: 38px;
+  background-color: transparent;
+  /*Opacity start*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.80;
+  -khtml-opacity: 0.8;
+  opacity: 0.5;
+  /*Opacity end*/
+  position: fixed;
+  z-index: 9999;
+  top: 0px;
+  transition: top 0.2s ease-in-out;
+  width: 100%;
 }
 
 .nav-up {
-    top: -90px;
+  top: -90px;
 }
 
+.navbar-brand
+{
+    position: relative;
+    width: 91px;
+    height: 71px;
+}
 
+.nav{
+  padding-top: 15px;
+}
+.btn-float {
+  width:200px;
+  display:inline-block;
+  overflow: auto;
+  white-space: nowrap;
+  margin:0px auto;
+  border:1px red solid;
+}
+
+.showTop{
+     position: fixed;
+     bottom: 0;
+     right: 0;
+     z-index: -1; 
+}

@@ -1,0 +1,45 @@
+<!-- PEOPLE'S HTML BEGIN -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- People -->
+      <div *ngIf="showPeople">
+        <div class="col-md-12 fix">
+          <div class="col-md-8 fix">
+            <div class="col-md-2 fix">
+              <i class="fa fa-users fa-4x" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-6 fix">
+              <h1>Celebrities</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 info" *ngFor="let person of people " (click)="onSelect(person.id)">
+          <div class="hover08">
+            <a scrollTo href="#people" title="{{ person.name }}" ng-if="person.profile_path">
+              <figure>
+                <img class="img-person" src="{{getImgUrl(person.profile_path)}}" alt="Profile image of {{person.name}}" width="160px" height="240px" />
+              </figure>
+            </a>
+          </div>
+          <div class="starAverage">
+            <h4>{{person.name}}</h4>
+            <p>
+            <span class="my-star" aria-hidden="true"><i class="fa fa-star fa-3x" aria-hidden="true"></i></span> Popularity: <b>{{person.popularity | round}} %</b>
+          </div>
+        </div>
+      </div>
+      <!-- Person's detail -->
+      <div *ngIf="showPeopleDetail">
+        <app-people-detail [personID]="personID"></app-people-detail>
+      </div>
+      <!-- Person's detail searched -->
+      <div *ngIf="showPersonDetailSearched">
+        <app-people-detail [personID]="personIDsearch"></app-people-detail>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PEOPLE'S HTML END -->
