@@ -18,7 +18,8 @@ import 'rxjs/add/operator/distinctUntilChanged';
 import {TmdbService} from './../services/tmdb.service';
 import {TmdbImgService} from './../services/tmdb-img.service';
 import {EmitterService} from './../emitter';
-@Component({selector: 'app-movies', templateUrl: './movies.component.html', styleUrls: ['./movies.component.css']})
+@Component({selector: 'app-movies', templateUrl: './movies.component.html', styleUrls:
+['./movies.component.scss']})
 export class MoviesComponent implements OnInit {
 
   // Class' attributes

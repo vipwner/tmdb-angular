@@ -13,7 +13,8 @@ import {TvDetailService} from './../services/tv-detail.service';
 import {TmdbImgService} from './../services/tmdb-img.service';
 import {EmitterService} from './../emitter';
 import { Tv } from '../logical/tv';
-@Component({selector: 'app-tv-detail', templateUrl: './tv-detail.component.html', styleUrls: ['./tv-detail.component.css']})
+@Component({selector: 'app-tv-detail', templateUrl: './tv-detail.component.html', styleUrls:
+['./tv-detail.component.scss']})
 export class TvDetailComponent implements OnInit {
 
   /**

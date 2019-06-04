@@ -82,16 +82,16 @@ Modules - reusable parts of our design
   color: white;
 }
 .cd-fixed-bg.cd-bg-1 {
-  background-image: url("./assets/imgs/backgroundWitch.jpg");
+  background-image: url("./../assets/imgs/backgroundWitch.jpg");
 }
 .cd-fixed-bg.cd-bg-2 {
-  background-image: url("./assets/imgs/backgroundLife.jpg");
+  background-image: url("./../assets/imgs/backgroundLife.jpg");
 }
 .cd-fixed-bg.cd-bg-3 {
-  background-image: url("./assets/imgs/backgroundLogan.jpg");
+  background-image: url("./../assets/imgs/backgroundLogan.jpg");
 }
 .cd-fixed-bg.cd-bg-4 {
-  background-image: url("./assets/imgs/backgroundGot.jpg");
+  background-image: url("./../assets/imgs/backgroundGot.jpg");
 }
 @media only screen and (min-width: 320px) {
   .cd-fixed-bg h1, .cd-fixed-bg h2 {

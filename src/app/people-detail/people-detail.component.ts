@@ -13,7 +13,8 @@ import {TmdbImgService} from './../services/tmdb-img.service';
 import {EmitterService} from './../emitter';
 import { Person } from '../logical/person';
 
-@Component({selector: 'app-people-detail', templateUrl: './people-detail.component.html', styleUrls: ['./people-detail.component.css']})
+@Component({selector: 'app-people-detail', templateUrl: './people-detail.component.html', styleUrls:
+['./people-detail.component.scss']})
 export class PeopleDetailComponent implements OnInit {
 
   /**
