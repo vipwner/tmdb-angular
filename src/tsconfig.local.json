@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "preserveSymlinks": true,
+    "baseUrl": "",
+    "paths": {
+        "tmdb-angular":         [ "./tmdb" ],
+        "*" :                   [ "../node_modules/*" ]
+    },
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "es2016",
+      "dom"
+    ],
+    "mapRoot": "./",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "../dist",
+    "sourceMap": true,
+    "target": "es5",
+    "typeRoots": [
+      "../node_modules/@types"
+    ],
+    "types": [ "angular", "auth0-js", "node" ]
+  },
+  "include": [
+    "./**/*.ts"
+  ],
+  "exclude": [
+      "test.ts",
+      "*.spec.ts",
+      "*-mock.ts",
+      "common.testing.ts"
+  ]
+}

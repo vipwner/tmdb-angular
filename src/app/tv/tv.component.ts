@@ -16,7 +16,7 @@ import {TvService} from './../services/tv.service';
 import {TmdbImgService} from './../services/tmdb-img.service';
 import {EmitterService} from './../emitter';
 
-@Component({selector: 'app-tv', templateUrl: './tv.component.html', styleUrls: ['./tv.component.css']})
+@Component({selector: 'app-tv', templateUrl: './tv.component.html', styleUrls: ['./tv.component.scss']})
 export class TvComponent implements OnInit {
   // Class' attributes
   tvShows = [];

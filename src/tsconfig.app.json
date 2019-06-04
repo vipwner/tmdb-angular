@@ -1,13 +1,36 @@
 {
-  "extends": "../tsconfig.json",
+  "$schema":         "http://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "outDir": "../out-tsc/app",
-    "module": "es2015",
-    "baseUrl": "",
-    "types": []
+    "paths":                  {
+      "tmdb-angular": [
+        "./tmdb"
+      ]
+    },
+    "baseUrl":                ".",
+    "declaration":            false,
+    "emitDecoratorMetadata":  true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "lib":                    [
+      "es2016",
+      "dom"
+    ],
+    "mapRoot":                "./",
+    "module":                 "commonjs",
+    "moduleResolution":       "node",
+    "outDir":                 "../dist",
+    "sourceMap":              true,
+    "target":                 "es5",
+    "typeRoots":              [
+      "../node_modules/@types"
+    ]
   },
-  "exclude": [
+  "include":         [
+    "./**/*.ts"
+  ],
+  "exclude":         [
     "test.ts",
+    "common.testing.ts",
     "**/*.spec.ts"
   ]
 }

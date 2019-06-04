@@ -9,7 +9,8 @@
 import {Component, OnInit} from '@angular/core';
 import {EmitterService} from './../emitter';
 
-@Component({selector: 'navbar', templateUrl: './navbar.component.html', styleUrls: ['./navbar.component.css']})
+@Component({selector: 'navbar', templateUrl: './navbar.component.html', styleUrls:
+['./navbar.component.scss']})
 export class NavbarComponent implements OnInit {
   
 

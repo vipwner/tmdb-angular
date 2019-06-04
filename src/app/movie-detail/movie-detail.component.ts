@@ -16,7 +16,8 @@ import {TmdbImgService} from './../services/tmdb-img.service';
 import {EmitterService} from './../emitter';
 import { Movie } from '../logical/movie';
 
-@Component({selector: 'app-movie-detail', templateUrl: './movie-detail.component.html', styleUrls: ['./movie-detail.component.css']})
+@Component({selector: 'app-movie-detail', templateUrl: './movie-detail.component.html', styleUrls:
+['./movie-detail.component.scss']})
 
 export class MovieDetailComponent implements OnInit {
   /**

@@ -1,20 +1,36 @@
 {
-  "extends": "../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../out-tsc/spec",
-    "module": "commonjs",
-    "target": "es5",
-    "baseUrl": "",
-    "types": [
-      "jasmine",
-      "node"
+    "baseUrl":                ".",
+    "paths":                  {
+      "tmdb-angular": [
+        "./tmdb"
+      ]
+    },
+    "declaration":            false,
+    "emitDecoratorMetadata":  true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "lib":                    [
+      "es2016",
+      "dom"
+    ],
+    "mapRoot":                "./",
+    "module":                 "commonjs",
+    "moduleResolution":       "node",
+    "outDir":                 "../dist",
+    "sourceMap":              true,
+    "target":                 "es5",
+    "typeRoots":              [
+      "../node_modules/@types"
     ]
   },
-  "files": [
-    "test.ts"
+  "files"          : [
+    "test.ts",
+    "polyfills.ts"
   ],
-  "include": [
-    "**/*.spec.ts",
-    "**/*.d.ts"
+  "include":         [
+    "./**/*.ts"
+  ],
+  "exclude":         [
   ]
 }

@@ -15,7 +15,8 @@ import 'rxjs/add/observable/of';
 import {PeopleService} from './../services/people.service';
 import {TmdbImgService} from './../services/tmdb-img.service';
 
-@Component({selector: 'app-people', templateUrl: './people.component.html', styleUrls: ['./people.component.css']})
+@Component({selector: 'app-people', templateUrl: './people.component.html', styleUrls:
+['./people.component.scss']})
 export class PeopleComponent implements OnInit {
   // Class' attributes
   people = [];
