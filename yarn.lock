@@ -1165,12 +1165,21 @@
   dependencies:
     "@types/jasmine" "*"
 
-"@types/karma-jasmine@0.0.31":
-  version "0.0.31"
-  resolved "https://registry.yarnpkg.com/@types/karma-jasmine/-/karma-jasmine-0.0.31.tgz#06cdd41e204d46010bfaaf3a021e39d6c4ef45f6"
-  integrity sha512-JSJS46L+PaBmnSf/4hlXBXvRk4Isn+nxd3pLmN31CrPyhOW+L6NrevyR/swLJf6X7Y+mGl2zsZcy4WAWYwniIA==
+"@types/karma-jasmine@3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@types/karma-jasmine/-/karma-jasmine-3.1.0.tgz#e86c2d3207ec35d845d04c3b2c278a526a852145"
+  integrity sha512-7KU6FxoZi3Qzmbd63NkChKBffJs5tZhmQMfUw7YZd6dfJrTQl3P8H9Q1RZYD9+WBkHRPUMHrjj2szgHi8i0haw==
   dependencies:
     "@types/jasmine" "*"
+    "@types/karma" "*"
+
+"@types/karma@*":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@types/karma/-/karma-5.0.0.tgz#6750ffc633c0fbc63dfb725146f198e8c3afcd08"
+  integrity sha512-5quuLnxdJWkzJCEwFatOClM6O7EkeDWfXltGySb01LQnBVjtbLzIky9JLW0IKt+JfzurUjwj7b7Sb/Omsx4QYA==
+  dependencies:
+    "@types/node" "*"
+    log4js "^4.0.0"
 
 "@types/karma@3.0.8":
   version "3.0.8"
@@ -5347,7 +5356,7 @@ jasmine-core@3.3.0:
   resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-3.3.0.tgz#dea1cdc634bc93c7e0d4ad27185df30fa971b10e"
   integrity sha512-3/xSmG/d35hf80BEN66Y6g9Ca5l/Isdeg/j6zvbTYlTzeKinzmaTM4p9am5kYqOmE05D7s1t8FGjzdSnbUbceA==
 
-jasmine-core@^3.3:
+jasmine-core@^3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-3.5.0.tgz#132c23e645af96d85c8bca13c8758b18429fc1e4"
   integrity sha512-nCeAiw37MIMA9w9IXso7bRaLl+c/ef3wnxsoSAlYrzS+Ot0zTG6nU8G/cIfGkqpkjX2wNaIW9RFG0TwIFnG6bA==
@@ -5528,12 +5537,12 @@ karma-jasmine-html-reporter@1.5.3:
   resolved "https://registry.yarnpkg.com/karma-jasmine-html-reporter/-/karma-jasmine-html-reporter-1.5.3.tgz#c724078436ed7b7d17a47e79164af36eed2d2713"
   integrity sha512-ci0VrjuCaFj+9d1tYlTE3KIPUCp0rz874zWWU3JgCMqGIyw5ke+BXWFPOAGAqUdCJcrMwneyvp1zFXA74MiPUA==
 
-karma-jasmine@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/karma-jasmine/-/karma-jasmine-2.0.1.tgz#26e3e31f2faf272dd80ebb0e1898914cc3a19763"
-  integrity sha512-iuC0hmr9b+SNn1DaUD2QEYtUxkS1J+bSJSn7ejdEexs7P8EYvA1CWkEdrDQ+8jVH3AgWlCNwjYsT1chjcNW9lA==
+karma-jasmine@3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/karma-jasmine/-/karma-jasmine-3.3.1.tgz#c01b1a2ec973e1531c1f6535e1d7d66b8e4275c2"
+  integrity sha512-Nxh7eX9mOQMyK0VSsMxdod+bcqrR/ikrmEiWj5M6fwuQ7oI+YEF1FckaDsWfs6TIpULm9f0fTKMjF7XcrvWyqQ==
   dependencies:
-    jasmine-core "^3.3"
+    jasmine-core "^3.5.0"
 
 karma-phantomjs-launcher@1.0.4:
   version "1.0.4"
