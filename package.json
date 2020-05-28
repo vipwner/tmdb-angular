@@ -93,7 +93,7 @@
     "replacestream": "4.0.3",
     "requirejs": "2.3.6",
     "rxjs-compat": "6.5.5",
-    "ts-node": "7.0.1",
+    "ts-node": "8.10.2",
     "tslint": "5.20.1",
     "typescript": "3.2.4",
     "webpack-bundle-analyzer": "3.6.1"
