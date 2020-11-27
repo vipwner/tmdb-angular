@@ -142,13 +142,6 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/animations@^4.0.1":
-  version "4.4.7"
-  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-4.4.7.tgz#4d108e89cafe8d0d193385e7aa1b3b00e8199ade"
-  integrity sha512-clP1xZw3KCfdj5rGDies5L5iwLgXzVFQ/B66Yj9oc24mJyK9oZARmuXdHfu+y8YtlW2b3wNSK2JH3qygaxbNLA==
-  dependencies:
-    tslib "^1.7.1"
-
 "@angular/cli@7.3.10":
   version "7.3.10"
   resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-7.3.10.tgz#19125713fd51bb6dcfa7f681f6a3facd6d930589"
@@ -174,13 +167,6 @@
   integrity sha512-lPo2Vt5zmKeKTdMxHMUuViouMiK4QsmO6dGTIhJ7QAx9mov0QYb4sUVKN9Ix32Aeeznaa97qJnhevyDncJqvSA==
   dependencies:
     tslib "^1.9.0"
-
-"@angular/common@^4.0.1":
-  version "4.4.7"
-  resolved "https://registry.yarnpkg.com/@angular/common/-/common-4.4.7.tgz#c2fd3e68a05f661c3d2a040fdad00af4119bb852"
-  integrity sha512-5R0POjbT4CR+8vXS7P33SiozJpTEKDsHq07EMm90OCwoofU5DIKDLNyEqr362zsbpzGUTmhGbSiLZib5Qt4djA==
-  dependencies:
-    tslib "^1.7.1"
 
 "@angular/compiler-cli@7.2.16":
   version "7.2.16"
@@ -212,13 +198,6 @@
   integrity sha512-z1RuBinuYeC4KLv8Z95YOgIQLd4nkoApdxkIZaWALwSkgeBuHJn4bCBn2cL0gJ/KO2x18TiTU5HuC+uyBt0AVQ==
   dependencies:
     tslib "^1.9.0"
-
-"@angular/core@^4.0.1":
-  version "4.4.7"
-  resolved "https://registry.yarnpkg.com/@angular/core/-/core-4.4.7.tgz#18bdc17bec7bdccb6424402fc90550e15a6d221b"
-  integrity sha512-Jxs6gNTl5KjXflg5vi5rlnokq1johFccN94qSOgDv+Mg1iuGF2i9p7EHkw3Y8jBCVaSLw1qgHE+wMb6KTlJDLA==
-  dependencies:
-    tslib "^1.7.1"
 
 "@angular/forms@7.2.16":
   version "7.2.16"
@@ -254,13 +233,6 @@
   integrity sha512-6LltxoPlbtUgSec5a+BGPHZ0UYdqFizxSsplC1PoJdqH17DDxQjxcluAfXnLlvOYFSSPvYa73PSOpmUU2vp4gA==
   dependencies:
     tslib "^1.9.0"
-
-"@angular/platform-browser@^4.0.1":
-  version "4.4.7"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-4.4.7.tgz#76d5af9438d6a349ea0b5fe97bd8fbe1fdc216a9"
-  integrity sha512-5WGMhUbaepmNoE597N/6R4jDdSqe4wwJblfi6bOJI34QStmD6QRnmg3H7ujr8lLhRBo9P3zH+hn7bM3RxUIEJg==
-  dependencies:
-    tslib "^1.7.1"
 
 "@angular/platform-server@7.2.16":
   version "7.2.16"
@@ -1109,11 +1081,6 @@
   version "2.5.3"
   resolved "https://registry.yarnpkg.com/@types/core-js/-/core-js-2.5.3.tgz#d2f307f708f897f875d312501e3b4a2fd4481d41"
   integrity sha512-F9RHpjuPSit4dCCRXgi7XcqA01DAjy9QY+v9yICoxXsjXD9cgQpyZyL2eSZnTkBGXGaQnea8waZOZTogLDB+rA==
-
-"@types/core-js@^0.9.35":
-  version "0.9.46"
-  resolved "https://registry.yarnpkg.com/@types/core-js/-/core-js-0.9.46.tgz#ea701ee34cbb6dfe6d100f1530319547c93c8d79"
-  integrity sha512-LooLR6XHes9V+kNYRz1Qm8w3atw9QMn7XeZUmIpUelllF9BdryeUKd/u0Wh5ErcjpWfG39NrToU9MF7ngsTFVw==
 
 "@types/cpx@1.5.1":
   version "1.5.1"
@@ -6237,18 +6204,10 @@ ng2-bootstrap@1.6.3:
   dependencies:
     moment "2.18.1"
 
-ng2-go-top-button@2.0.14:
-  version "2.0.14"
-  resolved "https://registry.yarnpkg.com/ng2-go-top-button/-/ng2-go-top-button-2.0.14.tgz#9ed9759f1f93423da9208296fa196ae20bb5c506"
-  integrity sha512-snIdF92Dt3GguPkvg0SPKh1t3++YT0cZOFeRfTIEWolaixTQWEkkbzCgTozg/J2t1kO4clAx0/nLRFNhdjseSg==
-  dependencies:
-    "@angular/animations" "^4.0.1"
-    "@angular/common" "^4.0.1"
-    "@angular/core" "^4.0.1"
-    "@angular/platform-browser" "^4.0.1"
-    "@types/core-js" "^0.9.35"
-    typescript "^2.2.1"
-    zone.js "^0.8.4"
+ng2-go-top-button@8.0.6:
+  version "8.0.6"
+  resolved "https://registry.yarnpkg.com/ng2-go-top-button/-/ng2-go-top-button-8.0.6.tgz#34bf2f9ec51f2e4c170394460056ab28b24ba882"
+  integrity sha512-1qU+WAHZ+uXeiJ6Mu13oZoNbVSC/OmQWPEIHwrmY6jSG96ni1fRiI3rqkUcn1SKVGqhHjPWpuefZaHlHJeNBUQ==
 
 ng2-scroll-to@1.0.7:
   version "1.0.7"
@@ -9063,11 +9022,6 @@ typescript@3.6.5:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.6.5.tgz#dae20114a7b4ff4bd642db9c8c699f2953e8bbdb"
   integrity sha512-BEjlc0Z06ORZKbtcxGrIvvwYs5hAnuo6TKdNFL55frVDlB+na3z5bsLhFaIxmT+dPWgBIjMo6aNnTOgHHmHgiQ==
 
-typescript@^2.2.1:
-  version "2.9.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
-  integrity sha512-Gr4p6nFNaoufRIY4NMdpQRNmgxVIGMs4Fcu/ujdYk3nAZqk7supzBE9idmvfZIlH/Cuj//dvi+019qEue9lV0w==
-
 ultron@~1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ultron/-/ultron-1.1.1.tgz#9fe1536a10a664a65266a1e3ccf85fd36302bc9c"
@@ -9732,7 +9686,7 @@ yn@^2.0.0:
   resolved "https://registry.yarnpkg.com/yn/-/yn-2.0.0.tgz#e5adabc8acf408f6385fc76495684c88e6af689a"
   integrity sha1-5a2ryKz0CPY4X8dklWhMiOavaJo=
 
-zone.js@0.8.29, zone.js@^0.8.4:
+zone.js@0.8.29:
   version "0.8.29"
   resolved "https://registry.yarnpkg.com/zone.js/-/zone.js-0.8.29.tgz#8dce92aa0dd553b50bc5bfbb90af9986ad845a12"
   integrity sha512-mla2acNCMkWXBD+c+yeUrBUrzOxYMNFdQ6FGfigGGtEVBPJx07BQeJekjt9DmH1FtZek4E9rE1eRR9qQpxACOQ==
