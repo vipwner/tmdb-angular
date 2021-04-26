@@ -36,7 +36,7 @@
     "ng2-go-top-button": "2.0.14",
     "ng2-scroll-to": "1.0.7",
     "rxjs": "6.5.5",
-    "url-search-params-polyfill": "5.1.0",
+    "url-search-params-polyfill": "8.1.1",
     "webpack": "4.42.1",
     "zone.js": "0.8.29"
   },
