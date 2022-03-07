@@ -1078,10 +1078,10 @@
     semver "5.6.0"
     semver-intersect "1.4.0"
 
-"@types/angular@1.7.0":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@types/angular/-/angular-1.7.0.tgz#3dd8d3b2d3b7ce2cca51b9fc3691b48b638eb468"
-  integrity sha512-zneUmi5I6oSkGBqkRP9rxbWX1mi6Yj7gNV+WNffmJLf8x4cnV0MGqXFNSP90NZ1kRRLCOdKBf9RIVD1TMg4aog==
+"@types/angular@1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@types/angular/-/angular-1.8.4.tgz#a2cc163e508389c51d4c4119ebff6b9395cec472"
+  integrity sha512-wPS/ncJWhyxJsndsW1B6Ta8D4mi97x1yItSu+rkLDytU3oRIh2CFAjMuJceYwFAh9+DIohndWM0QBA9OU2Hv0g==
 
 "@types/bluebird@*":
   version "3.5.30"
