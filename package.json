@@ -75,7 +75,7 @@
     "glob": "7.1.6",
     "glob-all": "3.2.1",
     "http-server": "0.11.1",
-    "jasmine-core": "3.3.0",
+    "jasmine-core": "3.99.1",
     "jasmine-spec-reporter": "4.2.1",
     "karma": "4.4.1",
     "karma-chrome-launcher": "2.2.0",
