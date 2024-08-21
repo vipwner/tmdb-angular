@@ -38,7 +38,7 @@
     "rxjs": "6.5.5",
     "url-search-params-polyfill": "5.1.0",
     "webpack": "4.42.1",
-    "zone.js": "0.8.29"
+    "zone.js": "0.15.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.901.1",
