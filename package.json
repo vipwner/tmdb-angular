@@ -39,7 +39,7 @@
     "popper.js": "^1.16.0",
     "rxjs": "6.5.5",
     "url-search-params-polyfill": "5.1.0",
-    "webpack": "4.42.1",
+    "webpack": "5.94.0",
     "zone.js": "0.8.29"
   },
   "devDependencies": {
